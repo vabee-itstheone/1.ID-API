@@ -1,0 +1,11 @@
+{
+  "CheckinUID": "REPLACE_WITH_CHECKIN_UID",
+  "IsLateCheckout": false,
+  "CheckoutDateTime": "2026-08-04T10:30:00",
+  "Comment": "payload collection - close the stay",
+  "MessageType": "CheckoutRequest",
+  "ClientUID": "Establishment101",
+  "MessageUID": null,
+  "CorrelationUID": "test-checkout-001",
+  "Timestamp": "2026-08-04T10:30:00"
+}

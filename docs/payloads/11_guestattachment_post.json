@@ -1,0 +1,19 @@
+{
+  "CheckinUID": "REPLACE_WITH_CHECKIN_UID",
+  "GuestUID": "REPLACE_WITH_GUEST_ID",
+  "MessageType": "GuestAttachmentRequest",
+  "ClientUID": "Establishment101",
+  "MessageUID": null,
+  "CorrelationUID": "test-attachment-001",
+  "Timestamp": "2026-08-04T09:00:00",
+  "Attachments": [
+    {
+      "Id": 0,
+      "UID": null,
+      "AttachmentCode": "PC-DOC-EXTRA-0600",
+      "Name": "Image_2.jpg",
+      "Size": 160,
+      "ContentBase64Encoded": "/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q=="
+    }
+  ]
+}

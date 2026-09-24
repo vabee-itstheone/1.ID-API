@@ -1,0 +1,2135 @@
+{
+  "info": {
+    "_postman_id": "1de10a5f-0000-4000-9000-itsthe1idapi01",
+    "name": "ITSthe1.ID API v1.0.0",
+    "description": "# ITSthe1.ID API - complete request collection\n\nEvery endpoint this build serves, with a ready-to-send payload for each of the business transactions. Generated from `docs/payloads/*.json`; the companion reference is `docs/PAYLOADS.md` and the handover report is `docs/PARTNER_HANDOVER.md`.\n\n## Set up\n\n1. Import this file **and** `ITSthe1.ID.postman_environment.json`.\n2. Select the *ITSthe1.ID - local* environment and set `baseUrl` to the host running the API (default `http://localhost:5030`).\n3. Run **1. Monitoring -> GET /health** first. If it is not `healthy: true`, stop and fix the environment before anything else.\n\n## How the variables flow\n\nYou should not have to paste ids by hand. Test scripts capture them:\n\n| Variable | Set by | Used by |\n|---|---|---|\n| `checkinUID` | any `POST /checkin` | everything downstream |\n| `guestUID` | `POST /guest`, `GET /guest` | attachment, guest check-out |\n| `mainGuestUID` | `GET /guest` | main-guest handover (the departing guest) |\n| `newMainGuestUID` | `POST /guest`, `GET /guest` | main-guest handover (the successor) |\n\n## Three things that will cost you an afternoon\n\n- **`GET /checkin` and `GET /guest` take a JSON body.** Postman handles it; PowerShell 5.1 cannot send a body on a GET at all.\n- **`uid` means two different things.** `POST /checkin` returns *checkinguest* ids; `POST /guest` and `GET /guest` return *guest* ids. Every other endpoint wants the guest id. Always take ids from `GET /guest`.\n- **A 200 from a lookup can still be a failure.** Those handlers catch their own database errors and answer 200 with `{\"error\": \"...\"}`. The tests in folders 2 and 3 assert on the body for this reason.\n\n## Order that works\n\nMonitoring -> lookups -> `POST /checkin` (cash) -> `GET /checkin` -> `POST /guest` (escort) -> `GET /guest` -> `POST /guestattachment` -> `POST /roomchange` -> `POST /guestcheckout` -> `POST /checkout`.\n\nTimestamps in the payloads are already ordered for this sequence. If you edit them, keep: check-in < escort check-in < room change < escort check-out < check-out.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Monitoring",
+      "description": "Liveness and readiness. Start here: if `/health` is not `healthy: true`, nothing below will work. No payloads, no side effects.",
+      "item": [
+        {
+          "name": "GET /ping",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/ping",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "ping"
+              ]
+            },
+            "description": "Cheapest liveness check. Returns `pong`."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /version",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/version",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "version"
+              ]
+            },
+            "description": "Version, PID, start time. Confirms which build is live."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "console.log('build:', pm.response.json().version);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/health",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "health"
+              ]
+            },
+            "description": "Full readiness check: database + storage + config. 200 when healthy, **503** when a check fails - the failing check is named in the body."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200 (503 means a check failed - read the body)',",
+                  "        () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('healthy', () => pm.expect(b.healthy, JSON.stringify(b.checks)).to.be.true);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /health?deep=false",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/health?deep=false",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "health?deep=false"
+              ]
+            },
+            "description": "Skips the database and filesystem probes. Use for a fast poll."
+          }
+        },
+        {
+          "name": "GET /metrics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/metrics",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "metrics"
+              ]
+            },
+            "description": "Request counters and recent traffic. Run it last to confirm your calls were counted."
+          }
+        },
+        {
+          "name": "POST /metrics/reset",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/metrics/reset",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "metrics",
+                "reset"
+              ]
+            },
+            "description": "Zeroes the counters. Empty body."
+          }
+        },
+        {
+          "name": "GET /routes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/routes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "routes"
+              ]
+            },
+            "description": "Every URL this build serves - authoritative when the spec and the build disagree."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "console.log(pm.response.json().count, 'routes');"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/status",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "status"
+              ]
+            },
+            "description": "HTML dashboard. Open it in a browser rather than Postman."
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Reference lookups",
+      "description": "Whole-table GETs that populate the client's dropdowns. No body, no parameters.\n\n**A 200 here is not proof of success.** These handlers catch their own database errors and return `{\"error\": \"...\"}` with status 200 - so the tests on each request assert the body is an array, not just that the call returned.",
+      "item": [
+        {
+          "name": "GET /country",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/country",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "country"
+              ]
+            },
+            "description": "252 rows. Match on **TwoCode** (`AE`, `GB`, `LK`), not DtcmCode."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /emirate",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/emirate",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "emirate"
+              ]
+            },
+            "description": "9 rows. Required only when `IssueCountryCode` is `AE`."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /room",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/room",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "room"
+              ]
+            },
+            "description": "31 rows. `IsChecked = true` means occupied - pick a free one for a check-in."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /documenttype",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/documenttype",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "documenttype"
+              ]
+            },
+            "description": "21 rows -> `AttachmentTypeCode`."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /visitpurpose",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/visitpurpose",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "visitpurpose"
+              ]
+            },
+            "description": "18 rows -> `VisitPurposeCode`. Note `Athlete` is capitalised."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /relationship",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/relationship",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "relationship"
+              ]
+            },
+            "description": "5 rows -> `RelationshipCode`. Required for every non-main guest."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /paymenttype",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/paymenttype",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "paymenttype"
+              ]
+            },
+            "description": "2 rows: `cash`, `creditcard`."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /cardtype",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/cardtype",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "cardtype"
+              ]
+            },
+            "description": "5 rows. `visa` `mastercard` `amex` `diners`; Visa Electron's code is the string \"0\" - avoid it."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /checkintype",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/checkintype",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkintype"
+              ]
+            },
+            "description": "2 rows."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /checkouttype",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/checkouttype",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkouttype"
+              ]
+            },
+            "description": "2 rows. 1 = check-out, 2 = cancellation."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /escorttype",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/escorttype",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "escorttype"
+              ]
+            },
+            "description": "2 rows: 1 ChildEscort, 2 AdultEscort. **No payload field selects one** - the API always writes 2."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /accessibilitytype",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/accessibilitytype",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "accessibilitytype"
+              ]
+            },
+            "description": "4 rows: hearing, visual, mobility, other."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /cancellationreason",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/cancellationreason",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "cancellationreason"
+              ]
+            },
+            "description": "2 rows: `Unhappy`, `UserError`."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /dtcmaction",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/dtcmaction",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "dtcmaction"
+              ]
+            },
+            "description": "18 rows."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// These endpoints swallow database errors and STILL answer 200 with",
+                  "// {\"error\": \"...\"} - so a 200 alone proves nothing. Check the body.",
+                  "pm.test('body is a row array, not an {error} object', () => {",
+                  "    pm.expect(Array.isArray(b), 'got: ' + JSON.stringify(b).slice(0, 200)).to.be.true;",
+                  "});",
+                  "pm.test('table is not empty', () => pm.expect(b.length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3. Table dumps (read-only)",
+      "description": "Row dumps used to verify what a write actually did. Same 200-with-`{error}` caveat as the reference lookups.",
+      "item": [
+        {
+          "name": "GET /checkintable",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/checkintable",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkintable"
+              ]
+            },
+            "description": "Every check-in row. Diagnostic helper, not part of the 1.ID spec."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('not an {error} body', () => pm.expect(b.error, b.error).to.be.undefined);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /guesttable",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/guesttable",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guesttable"
+              ]
+            },
+            "description": "Every guest row."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('not an {error} body', () => pm.expect(b.error, b.error).to.be.undefined);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /checkinguest",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/checkinguest",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkinguest"
+              ]
+            },
+            "description": "The guest-to-stay join. `IsMainGuest`, `EscortTypeId`, `CheckoutDate` live here."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('not an {error} body', () => pm.expect(b.error, b.error).to.be.undefined);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /guestversion",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/guestversion",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guestversion"
+              ]
+            },
+            "description": "Audit snapshots - one per guest per mutation."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('not an {error} body', () => pm.expect(b.error, b.error).to.be.undefined);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /guestattachment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/guestattachment",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guestattachment"
+              ]
+            },
+            "description": "Attachment metadata rows."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('not an {error} body', () => pm.expect(b.error, b.error).to.be.undefined);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /guestdocumentimage",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/guestdocumentimage",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guestdocumentimage"
+              ]
+            },
+            "description": "**Currently fails** - the underlying table does not exist. See the known-issues section of the handover report."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('not an {error} body', () => pm.expect(b.error, b.error).to.be.undefined);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /payment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/payment",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payment"
+              ]
+            },
+            "description": "Payment rows created by `POST /checkin`."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('not an {error} body', () => pm.expect(b.error, b.error).to.be.undefined);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /log",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/log",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "log"
+              ]
+            },
+            "description": "The API's own transaction log."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('not an {error} body', () => pm.expect(b.error, b.error).to.be.undefined);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /checkout",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/checkout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkout"
+              ]
+            },
+            "description": "Check-out rows. `CheckoutTypeId` 1 = check-out, 2 = cancellation."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('not an {error} body', () => pm.expect(b.error, b.error).to.be.undefined);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /guestcheckout",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/guestcheckout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guestcheckout"
+              ]
+            },
+            "description": "Individual guest departures."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('not an {error} body', () => pm.expect(b.error, b.error).to.be.undefined);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /roomchange",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/roomchange",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "roomchange"
+              ]
+            },
+            "description": "Room move history."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('not an {error} body', () => pm.expect(b.error, b.error).to.be.undefined);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /checkincancellation",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/checkincancellation",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkincancellation"
+              ]
+            },
+            "description": "Cancellation rows."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('not an {error} body', () => pm.expect(b.error, b.error).to.be.undefined);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /mainguestchange",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/mainguestchange",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "mainguestchange"
+              ]
+            },
+            "description": "Main-guest handovers. Written only by `POST /guestcheckout` with a `NewMainGuestUID`."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('not an {error} body', () => pm.expect(b.error, b.error).to.be.undefined);"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "4. Check-in",
+      "description": "`POST /checkin` is the entry point for every other transaction - it is the only thing that mints a `CheckinUID`.\n\nThe **Run the collection** order that works: *POST cash* -> *GET /checkin* -> the escort folder -> departure. The POST captures `checkinUID` into a collection variable automatically, so the later requests need no editing.",
+      "item": [
+        {
+          "name": "GET /checkin  (body on GET)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/checkin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkin"
+              ]
+            },
+            "description": "**This GET carries a JSON body.** Postman and `curl.exe` can do it; PowerShell 5.1's `Invoke-RestMethod` refuses outright (*Cannot send a content-body with this verb-type*).\n\nDefaults to `CheckinUID: 6`, an open stay in the reference database. Change it to `{{checkinUID}}` to read back the stay you just created.\n\nUnknown id -> **404** `Check-in not found`.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CheckinUID\": \"6\",\n  \"MessageType\": \"CheckinStatusRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-checkin-get-001\",\n  \"Timestamp\": \"2026-08-04T08:00:00\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "POST /checkin  - cash, one guest",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/checkin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkin"
+              ]
+            },
+            "description": "The simplest valid check-in: one main guest, cash, room `003`.\n\nCreates payment -> check-in -> guest -> document -> checkinguest -> log -> guestversion, then flags the room. **Not transactional** - a failure part way through leaves orphan rows behind.\n\nChange `RoomNumber` to a room that is free (`GET /room`, `IsChecked = false`).\n\n`IsHouseUse` **must be present and false** - the guard reads `data.get('IsHouseUse', True)`, so omitting the key is read as *house use* and the cash payment is rejected with 40035.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"RoomNumber\": \"003\",\n  \"IsEarlyCheckin\": false,\n  \"CheckinDateTime\": \"2026-08-04T08:00:00\",\n  \"PaymentMethodCode\": \"cash\",\n  \"CreditCardNumber\": null,\n  \"CreditCardTypeCode\": null,\n  \"PaidAmount\": 0,\n  \"Comment\": \"payload collection - simple cash checkin\",\n  \"IsWaitingForRoom\": false,\n  \"IsHouseUse\": false,\n  \"MessageType\": \"CheckinRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-checkin-cash-001\",\n  \"Timestamp\": \"2026-08-04T08:00:00\",\n  \"Guests\": [\n    {\n      \"UID\": null,\n      \"GuestCode\": \"PC-MAIN-0001\",\n      \"FirstName\": \"John\",\n      \"LastName\": \"Smith\",\n      \"ArabicName\": \"جون سميث\",\n      \"GenderCode\": \"male\",\n      \"Email\": \"john.smith@example.com\",\n      \"Mobile\": \"501234567\",\n      \"ResidenceCountryPhone\": \"971501234567\",\n      \"BirthDate\": \"1985-06-14T00:00:00\",\n      \"BirthPlace\": \"London\",\n      \"NationalityCode\": \"GB\",\n      \"ResidenceCountryCode\": \"AE\",\n      \"RelationshipCode\": null,\n      \"VisitPurposeCode\": \"tourism\",\n      \"CheckinDateTime\": \"2026-08-04T08:00:00\",\n      \"CheckoutDateTime\": null,\n      \"IsMainGuest\": true,\n      \"AttachmentTypeCode\": \"passport\",\n      \"DocumentNumber\": \"GB9876543\",\n      \"IssueCountryCode\": \"GB\",\n      \"IssueDate\": \"2020-01-15T00:00:00\",\n      \"ExpiryDate\": \"2030-01-15T00:00:00\",\n      \"EmirateCode\": null,\n      \"RequiresAccessibility\": false,\n      \"AccessibilityTypes\": [],\n      \"OtherAccessibilityType\": \"\",\n      \"Attachments\": [\n        {\n          \"Id\": 0,\n          \"UID\": null,\n          \"AttachmentCode\": \"PC-DOC-MAIN-0001\",\n          \"Name\": \"Image_1.jpg\",\n          \"Size\": 160,\n          \"ContentBase64Encoded\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q==\"\n        }\n      ]\n    }\n  ]\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "});",
+                  "if (b.CheckinUID) {",
+                  "    pm.collectionVariables.set('checkinUID', String(b.CheckinUID));",
+                  "    console.log('captured checkinUID =', b.CheckinUID);",
+                  "}",
+                  "// NOTE: guests[].uid here is the CHECKINGUEST id, not the guest id.",
+                  "// Run 'GET /guest' next to collect real guest ids."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "POST /checkin  - MAIN GUEST + 2 ESCORTS",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/checkin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkin"
+              ]
+            },
+            "description": "Escort path #1: extra entries in `Guests[]` at check-in time.\n\nEach escort is an ordinary guest object with `IsMainGuest: false` and a `RelationshipCode` (required - 50009 without it). Exactly one guest in the array may be `IsMainGuest: true` (40006 / 40028), and at least one guest's `CheckinDateTime` must equal the transaction's exactly (40033).\n\nAn escort may check in later than the transaction, never earlier (50014).",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"RoomNumber\": \"005\",\n  \"IsEarlyCheckin\": false,\n  \"CheckinDateTime\": \"2026-08-04T08:00:00\",\n  \"PaymentMethodCode\": \"cash\",\n  \"CreditCardNumber\": null,\n  \"CreditCardTypeCode\": null,\n  \"PaidAmount\": 0,\n  \"Comment\": \"payload collection - main guest plus two escorts in one transaction\",\n  \"IsWaitingForRoom\": false,\n  \"IsHouseUse\": false,\n  \"MessageType\": \"CheckinRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-checkin-escorts-001\",\n  \"Timestamp\": \"2026-08-04T08:00:00\",\n  \"Guests\": [\n    {\n      \"UID\": null,\n      \"GuestCode\": \"PC-MAIN-0100\",\n      \"FirstName\": \"Michael\",\n      \"LastName\": \"Brown\",\n      \"ArabicName\": \"مايكل براون\",\n      \"GenderCode\": \"male\",\n      \"Email\": \"michael.brown@example.com\",\n      \"Mobile\": \"501110001\",\n      \"ResidenceCountryPhone\": \"971501110001\",\n      \"BirthDate\": \"1980-02-11T00:00:00\",\n      \"BirthPlace\": \"Manchester\",\n      \"NationalityCode\": \"GB\",\n      \"ResidenceCountryCode\": \"AE\",\n      \"RelationshipCode\": null,\n      \"VisitPurposeCode\": \"business\",\n      \"CheckinDateTime\": \"2026-08-04T08:00:00\",\n      \"CheckoutDateTime\": null,\n      \"IsMainGuest\": true,\n      \"AttachmentTypeCode\": \"passport\",\n      \"DocumentNumber\": \"GB1000001\",\n      \"IssueCountryCode\": \"GB\",\n      \"IssueDate\": \"2019-03-01T00:00:00\",\n      \"ExpiryDate\": \"2029-03-01T00:00:00\",\n      \"EmirateCode\": null,\n      \"RequiresAccessibility\": false,\n      \"AccessibilityTypes\": [],\n      \"OtherAccessibilityType\": \"\",\n      \"Attachments\": [\n        {\n          \"Id\": 0,\n          \"UID\": null,\n          \"AttachmentCode\": \"PC-DOC-0100\",\n          \"Name\": \"Image_1.jpg\",\n          \"Size\": 160,\n          \"ContentBase64Encoded\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q==\"\n        }\n      ]\n    },\n    {\n      \"UID\": null,\n      \"GuestCode\": \"PC-ESCORT-0101\",\n      \"FirstName\": \"Sarah\",\n      \"LastName\": \"Brown\",\n      \"ArabicName\": \"سارة براون\",\n      \"GenderCode\": \"female\",\n      \"Email\": \"sarah.brown@example.com\",\n      \"Mobile\": \"501110002\",\n      \"ResidenceCountryPhone\": \"971501110002\",\n      \"BirthDate\": \"1983-07-22T00:00:00\",\n      \"BirthPlace\": \"Manchester\",\n      \"NationalityCode\": \"GB\",\n      \"ResidenceCountryCode\": \"AE\",\n      \"RelationshipCode\": \"familyMember\",\n      \"VisitPurposeCode\": \"tourism\",\n      \"CheckinDateTime\": \"2026-08-04T08:05:00\",\n      \"CheckoutDateTime\": null,\n      \"IsMainGuest\": false,\n      \"AttachmentTypeCode\": \"passport\",\n      \"DocumentNumber\": \"GB1000002\",\n      \"IssueCountryCode\": \"GB\",\n      \"IssueDate\": \"2019-03-01T00:00:00\",\n      \"ExpiryDate\": \"2029-03-01T00:00:00\",\n      \"EmirateCode\": null,\n      \"RequiresAccessibility\": true,\n      \"AccessibilityTypes\": [\n        { \"Code\": \"mobility\" }\n      ],\n      \"OtherAccessibilityType\": \"\",\n      \"Attachments\": [\n        {\n          \"Id\": 0,\n          \"UID\": null,\n          \"AttachmentCode\": \"PC-DOC-0101\",\n          \"Name\": \"Image_1.jpg\",\n          \"Size\": 160,\n          \"ContentBase64Encoded\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q==\"\n        }\n      ]\n    },\n    {\n      \"UID\": null,\n      \"GuestCode\": \"PC-ESCORT-0102\",\n      \"FirstName\": \"Omar\",\n      \"LastName\": \"Al Mansoori\",\n      \"ArabicName\": \"عمر المنصوري\",\n      \"GenderCode\": \"male\",\n      \"Email\": \"omar.mansoori@example.com\",\n      \"Mobile\": \"501110003\",\n      \"ResidenceCountryPhone\": \"971501110003\",\n      \"BirthDate\": \"1990-11-02T00:00:00\",\n      \"BirthPlace\": \"Dubai\",\n      \"NationalityCode\": \"AE\",\n      \"ResidenceCountryCode\": \"AE\",\n      \"RelationshipCode\": \"businessAssociate\",\n      \"VisitPurposeCode\": \"business\",\n      \"CheckinDateTime\": \"2026-08-04T08:10:00\",\n      \"CheckoutDateTime\": null,\n      \"IsMainGuest\": false,\n      \"AttachmentTypeCode\": \"emiratesid\",\n      \"DocumentNumber\": \"784199012345678\",\n      \"IssueCountryCode\": \"AE\",\n      \"IssueDate\": \"2022-05-10T00:00:00\",\n      \"ExpiryDate\": \"2032-05-10T00:00:00\",\n      \"EmirateCode\": \"dubai\",\n      \"RequiresAccessibility\": false,\n      \"AccessibilityTypes\": [],\n      \"OtherAccessibilityType\": \"\",\n      \"Attachments\": [\n        {\n          \"Id\": 0,\n          \"UID\": null,\n          \"AttachmentCode\": \"PC-DOC-0102\",\n          \"Name\": \"Image_1.jpg\",\n          \"Size\": 160,\n          \"ContentBase64Encoded\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q==\"\n        }\n      ]\n    }\n  ]\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "});",
+                  "if (b.CheckinUID) {",
+                  "    pm.collectionVariables.set('checkinUID', String(b.CheckinUID));",
+                  "    console.log('captured checkinUID =', b.CheckinUID);",
+                  "}",
+                  "// NOTE: guests[].uid here is the CHECKINGUEST id, not the guest id.",
+                  "// Run 'GET /guest' next to collect real guest ids."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "POST /checkin  - credit card + early check-in",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/checkin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkin"
+              ]
+            },
+            "description": "`PaymentMethodCode: creditcard` requires `CreditCardNumber` (40008) and a `CreditCardTypeCode` from `GET /cardtype`. Also exercises `IsEarlyCheckin: true` and the `other` accessibility type, which makes `OtherAccessibilityType` mandatory (60008).",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"RoomNumber\": \"007\",\n  \"IsEarlyCheckin\": true,\n  \"CheckinDateTime\": \"2026-08-04T08:00:00\",\n  \"PaymentMethodCode\": \"creditcard\",\n  \"CreditCardNumber\": \"4111111111111111\",\n  \"CreditCardTypeCode\": \"visa\",\n  \"PaidAmount\": 250.5,\n  \"Comment\": \"payload collection - credit card + early checkin\",\n  \"IsWaitingForRoom\": false,\n  \"IsHouseUse\": false,\n  \"MessageType\": \"CheckinRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-checkin-card-001\",\n  \"Timestamp\": \"2026-08-04T08:00:00\",\n  \"Guests\": [\n    {\n      \"UID\": null,\n      \"GuestCode\": \"PC-MAIN-0200\",\n      \"FirstName\": \"Priya\",\n      \"LastName\": \"Nair\",\n      \"ArabicName\": \"بريا ناير\",\n      \"GenderCode\": \"female\",\n      \"Email\": \"priya.nair@example.com\",\n      \"Mobile\": \"501220001\",\n      \"ResidenceCountryPhone\": \"971501220001\",\n      \"BirthDate\": \"1992-09-30T00:00:00\",\n      \"BirthPlace\": \"Kochi\",\n      \"NationalityCode\": \"IN\",\n      \"ResidenceCountryCode\": \"IN\",\n      \"RelationshipCode\": null,\n      \"VisitPurposeCode\": \"medical\",\n      \"CheckinDateTime\": \"2026-08-04T08:00:00\",\n      \"CheckoutDateTime\": null,\n      \"IsMainGuest\": true,\n      \"AttachmentTypeCode\": \"passport\",\n      \"DocumentNumber\": \"IN7788990\",\n      \"IssueCountryCode\": \"IN\",\n      \"IssueDate\": \"2021-06-01T00:00:00\",\n      \"ExpiryDate\": \"2031-06-01T00:00:00\",\n      \"EmirateCode\": null,\n      \"RequiresAccessibility\": true,\n      \"AccessibilityTypes\": [\n        { \"Code\": \"other\" }\n      ],\n      \"OtherAccessibilityType\": \"Requires a wheelchair ramp\",\n      \"Attachments\": [\n        {\n          \"Id\": 0,\n          \"UID\": null,\n          \"AttachmentCode\": \"PC-DOC-0200\",\n          \"Name\": \"Image_1.jpg\",\n          \"Size\": 160,\n          \"ContentBase64Encoded\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q==\"\n        }\n      ]\n    }\n  ]\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "});",
+                  "if (b.CheckinUID) {",
+                  "    pm.collectionVariables.set('checkinUID', String(b.CheckinUID));",
+                  "    console.log('captured checkinUID =', b.CheckinUID);",
+                  "}",
+                  "// NOTE: guests[].uid here is the CHECKINGUEST id, not the guest id.",
+                  "// Run 'GET /guest' next to collect real guest ids."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "POST /checkin  - house use",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/checkin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkin"
+              ]
+            },
+            "description": "`IsHouseUse: true` and every payment field `null`. House use **rejects** a payment method (40035), a card number (40036), early check-in (40037) and waiting-for-room (40038), and later refuses a late check-out (40039).",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"RoomNumber\": \"008\",\n  \"IsEarlyCheckin\": false,\n  \"CheckinDateTime\": \"2026-08-04T08:00:00\",\n  \"PaymentMethodCode\": null,\n  \"CreditCardNumber\": null,\n  \"CreditCardTypeCode\": null,\n  \"PaidAmount\": 0,\n  \"Comment\": \"payload collection - house use stay, no payment\",\n  \"IsWaitingForRoom\": false,\n  \"IsHouseUse\": true,\n  \"MessageType\": \"CheckinRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-checkin-houseuse-001\",\n  \"Timestamp\": \"2026-08-04T08:00:00\",\n  \"Guests\": [\n    {\n      \"UID\": null,\n      \"GuestCode\": \"PC-MAIN-0300\",\n      \"FirstName\": \"Fatima\",\n      \"LastName\": \"Hassan\",\n      \"ArabicName\": \"فاطمة حسن\",\n      \"GenderCode\": \"female\",\n      \"Email\": \"fatima.hassan@example.com\",\n      \"Mobile\": \"501330001\",\n      \"ResidenceCountryPhone\": \"971501330001\",\n      \"BirthDate\": \"1995-01-20T00:00:00\",\n      \"BirthPlace\": \"Sharjah\",\n      \"NationalityCode\": \"AE\",\n      \"ResidenceCountryCode\": \"AE\",\n      \"RelationshipCode\": null,\n      \"VisitPurposeCode\": \"hotelstaff\",\n      \"CheckinDateTime\": \"2026-08-04T08:00:00\",\n      \"CheckoutDateTime\": null,\n      \"IsMainGuest\": true,\n      \"AttachmentTypeCode\": \"emiratesid\",\n      \"DocumentNumber\": \"784199512345671\",\n      \"IssueCountryCode\": \"AE\",\n      \"IssueDate\": \"2023-01-01T00:00:00\",\n      \"ExpiryDate\": \"2033-01-01T00:00:00\",\n      \"EmirateCode\": \"sharjah\",\n      \"RequiresAccessibility\": false,\n      \"AccessibilityTypes\": [],\n      \"OtherAccessibilityType\": \"\",\n      \"Attachments\": [\n        {\n          \"Id\": 0,\n          \"UID\": null,\n          \"AttachmentCode\": \"PC-DOC-0300\",\n          \"Name\": \"Image_1.jpg\",\n          \"Size\": 160,\n          \"ContentBase64Encoded\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q==\"\n        }\n      ]\n    }\n  ]\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "});",
+                  "if (b.CheckinUID) {",
+                  "    pm.collectionVariables.set('checkinUID', String(b.CheckinUID));",
+                  "    console.log('captured checkinUID =', b.CheckinUID);",
+                  "}",
+                  "// NOTE: guests[].uid here is the CHECKINGUEST id, not the guest id.",
+                  "// Run 'GET /guest' next to collect real guest ids."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "PUT /checkin  - amend an open stay",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/checkin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkin"
+              ]
+            },
+            "description": "The identifier is **`UID`**, not `CheckinUID` - the only endpoint that differs.\n\n`Guests[]` must carry the *full* guest objects (not a delta), exactly one `IsMainGuest: true`, and every `CheckoutDateTime` must stay `null` (40023). 40011 if the stay is already checked out.\n\n**Known defect:** the handler finds the row to update by the guest's newest `checkinguest` row across *every* check-in, so a repeat visitor on a newer stay gets the wrong row edited. Keep test guests unique per stay.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"UID\": \"{{checkinUID}}\",\n  \"RoomNumber\": \"003\",\n  \"IsEarlyCheckin\": false,\n  \"CheckinDateTime\": \"2026-08-04T08:00:00\",\n  \"IsLateCheckout\": null,\n  \"CheckoutDateTime\": null,\n  \"PaymentMethodCode\": \"cash\",\n  \"CreditCardNumber\": null,\n  \"CreditCardTypeCode\": null,\n  \"PaidAmount\": 0,\n  \"Comment\": \"payload collection - amend the main guest of an open checkin\",\n  \"IsWaitingForRoom\": null,\n  \"IsHouseUse\": false,\n  \"MessageType\": \"CheckinUpdateRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-checkin-put-001\",\n  \"Timestamp\": \"2026-08-04T08:15:00\",\n  \"Guests\": [\n    {\n      \"UID\": null,\n      \"GuestCode\": \"PC-MAIN-0001\",\n      \"FirstName\": \"Jonathan\",\n      \"LastName\": \"Smith\",\n      \"ArabicName\": \"جون سميث\",\n      \"GenderCode\": \"male\",\n      \"Email\": \"jonathan.smith@example.com\",\n      \"Mobile\": \"501234599\",\n      \"ResidenceCountryPhone\": \"971501234599\",\n      \"BirthDate\": \"1985-06-14T00:00:00\",\n      \"BirthPlace\": \"London\",\n      \"NationalityCode\": \"GB\",\n      \"ResidenceCountryCode\": \"AE\",\n      \"RelationshipCode\": null,\n      \"VisitPurposeCode\": \"business\",\n      \"CheckinDateTime\": \"2026-08-04T08:00:00\",\n      \"CheckoutDateTime\": null,\n      \"IsMainGuest\": true,\n      \"AttachmentTypeCode\": \"passport\",\n      \"DocumentNumber\": \"GB9876543\",\n      \"IssueCountryCode\": \"GB\",\n      \"IssueDate\": \"2020-01-15T00:00:00\",\n      \"ExpiryDate\": \"2030-01-15T00:00:00\",\n      \"EmirateCode\": null,\n      \"RequiresAccessibility\": false,\n      \"AccessibilityTypes\": [],\n      \"OtherAccessibilityType\": \"\",\n      \"Attachments\": [\n        {\n          \"Id\": 0,\n          \"UID\": null,\n          \"AttachmentCode\": \"PC-DOC-MAIN-0001\",\n          \"Name\": \"Image_1.jpg\",\n          \"Size\": 160,\n          \"ContentBase64Encoded\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q==\"\n        }\n      ]\n    }\n  ]\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "POST /checkin/AddBackdatedCheckin",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/checkin/AddBackdatedCheckin",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkin",
+                "AddBackdatedCheckin"
+              ]
+            },
+            "description": "Records a stay that has already started **and ended**, so the usual overlap rules are relaxed.\n\nNeeds `CheckoutDateTime` at **both** levels - the transaction and every guest. Required (40014), after `CheckinDateTime` (40034), neither in the future (40004), and each guest's window must sit inside the transaction's (40035). The room's existing history still must not overlap.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"RoomNumber\": \"020\",\n  \"IsEarlyCheckin\": false,\n  \"IsLateCheckout\": false,\n  \"CheckinDateTime\": \"2026-08-01T10:00:00\",\n  \"CheckoutDateTime\": \"2026-08-02T11:00:00\",\n  \"PaymentMethodCode\": \"cash\",\n  \"CreditCardNumber\": null,\n  \"CreditCardTypeCode\": null,\n  \"PaidAmount\": 0,\n  \"Comment\": \"payload collection - stay that already started and ended\",\n  \"IsWaitingForRoom\": false,\n  \"IsHouseUse\": false,\n  \"MessageType\": \"AddBackdatedCheckinRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-backdated-001\",\n  \"Timestamp\": \"2026-08-04T08:00:00\",\n  \"Guests\": [\n    {\n      \"UID\": null,\n      \"GuestCode\": \"PC-BACK-0400\",\n      \"FirstName\": \"Daniel\",\n      \"LastName\": \"Perera\",\n      \"ArabicName\": \"دانيال بيريرا\",\n      \"GenderCode\": \"male\",\n      \"Email\": \"daniel.perera@example.com\",\n      \"Mobile\": \"501440001\",\n      \"ResidenceCountryPhone\": \"94771440001\",\n      \"BirthDate\": \"1988-04-18T00:00:00\",\n      \"BirthPlace\": \"Colombo\",\n      \"NationalityCode\": \"LK\",\n      \"ResidenceCountryCode\": \"LK\",\n      \"RelationshipCode\": null,\n      \"VisitPurposeCode\": \"tourism\",\n      \"CheckinDateTime\": \"2026-08-01T10:00:00\",\n      \"CheckoutDateTime\": \"2026-08-02T11:00:00\",\n      \"IsMainGuest\": true,\n      \"AttachmentTypeCode\": \"passport\",\n      \"DocumentNumber\": \"LK5566778\",\n      \"IssueCountryCode\": \"LK\",\n      \"IssueDate\": \"2020-02-01T00:00:00\",\n      \"ExpiryDate\": \"2030-02-01T00:00:00\",\n      \"EmirateCode\": null,\n      \"RequiresAccessibility\": false,\n      \"AccessibilityTypes\": [],\n      \"OtherAccessibilityType\": \"\",\n      \"Attachments\": [\n        {\n          \"Id\": 0,\n          \"UID\": null,\n          \"AttachmentCode\": \"PC-DOC-0400\",\n          \"Name\": \"Image_1.jpg\",\n          \"Size\": 160,\n          \"ContentBase64Encoded\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q==\"\n        }\n      ]\n    }\n  ]\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /checkintable",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/checkintable",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkintable"
+              ]
+            },
+            "description": "Dump of every check-in row. Useful to confirm the POST landed."
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. Guests and escorts",
+      "description": "\"Escort\" is this API's word for anyone on the stay who is not the main guest.\n\n**Two ways to add one:** inside `Guests[]` at check-in (folder 4), or `POST /guest` afterwards - the *add escort* button in the desktop client. This folder is the second path.\n\n**`EscortTypeId` is hard-coded to 2 (AdultEscort)** in all three write paths. There is no payload field for it, so `ChildEscort` is never written and `AdultEscortCount` / `ChildEscortCount` stay `null` on every check-in row. `GET /escorttype` still serves both values for the dropdown.\n\n**Escort timestamps gate everything downstream.** Room change and check-out are both compared against the newest `checkinguest` row, so order your test timestamps: check-in < escort check-in < room change < escort check-out < check-out.",
+      "item": [
+        {
+          "name": "GET /guest  (body on GET)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/guest",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guest"
+              ]
+            },
+            "description": "**Body on a GET again.** Lists every guest on a stay.\n\n**Run this after any write** - it is the only reliable source of *guest ids*, which `POST /guestattachment`, `POST /guestcheckout` and `NewMainGuestUID` all require. The `uid` returned by `POST /checkin` is a *checkinguest* id and will silently address the wrong record.\n\nThe tests on this request capture `mainGuestUID` and `guestUID` for you.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CheckinUID\": \"6\",\n  \"MessageType\": \"GuestStatusRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-guest-get-001\",\n  \"Timestamp\": \"2026-08-04T08:00:00\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => pm.expect(b.hasErrors).to.not.eql(true));",
+                  "const gs = b.guests || [];",
+                  "pm.test('at least one guest on the stay', () => pm.expect(gs.length).to.be.above(0));",
+                  "const main = gs.find(g => g.IsMainGuest === true || g.isMainGuest === true);",
+                  "const escort = gs.find(g => !(g.IsMainGuest === true || g.isMainGuest === true));",
+                  "if (main)   { pm.collectionVariables.set('mainGuestUID', String(main.uid || main.Id)); }",
+                  "if (escort) {",
+                  "    pm.collectionVariables.set('guestUID', String(escort.uid || escort.Id));",
+                  "    pm.collectionVariables.set('newMainGuestUID', String(escort.uid || escort.Id));",
+                  "}",
+                  "console.log('guest ids:', gs.map(g => g.uid || g.Id).join(', '));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "POST /guest  - ADD AN ESCORT",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/guest",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guest"
+              ]
+            },
+            "description": "Escort path #2: add a guest to a stay that is already open. One guest per request - `GuestInfo` is an object, not an array.\n\nRules: stay exists and is open (40009 / 40011), `GuestInfo` present (50010), `IsMainGuest: false` with a valid `RelationshipCode` (50009), `CheckinDateTime` at or after the stay's (50014) and not in the future (50015), the document number not already on this stay (50016), at least one attachment under 200 KB (60001 / 60004).\n\nUnlike `POST /checkin`, the `uid` in the response **is** the guest id.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CheckinUID\": \"{{checkinUID}}\",\n  \"Comment\": \"payload collection - add an escort to an open checkin\",\n  \"MessageType\": \"GuestRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-add-escort-001\",\n  \"Timestamp\": \"2026-08-04T08:30:00\",\n  \"GuestInfo\": {\n    \"UID\": null,\n    \"GuestCode\": \"PC-ESCORT-0500\",\n    \"FirstName\": \"Alan\",\n    \"LastName\": \"Turing\",\n    \"ArabicName\": \"آلان تورينج\",\n    \"GenderCode\": \"male\",\n    \"Email\": \"alan.turing@example.com\",\n    \"Mobile\": \"501550001\",\n    \"ResidenceCountryPhone\": \"971501550001\",\n    \"BirthDate\": \"1990-11-20T00:00:00\",\n    \"BirthPlace\": \"Manchester\",\n    \"NationalityCode\": \"GB\",\n    \"ResidenceCountryCode\": \"AE\",\n    \"RelationshipCode\": \"friend\",\n    \"VisitPurposeCode\": \"visitor\",\n    \"CheckinDateTime\": \"2026-08-04T08:30:00\",\n    \"CheckoutDateTime\": null,\n    \"IsMainGuest\": false,\n    \"AttachmentTypeCode\": \"passport\",\n    \"DocumentNumber\": \"GB1122334\",\n    \"IssueCountryCode\": \"GB\",\n    \"IssueDate\": \"2019-05-01T00:00:00\",\n    \"ExpiryDate\": \"2029-05-01T00:00:00\",\n    \"EmirateCode\": null,\n    \"RequiresAccessibility\": false,\n    \"AccessibilityTypes\": [],\n    \"OtherAccessibilityType\": \"\",\n    \"Attachments\": [\n      {\n        \"Id\": 0,\n        \"UID\": null,\n        \"AttachmentCode\": \"PC-DOC-0500\",\n        \"Name\": \"Image_1.jpg\",\n        \"Size\": 160,\n        \"ContentBase64Encoded\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q==\"\n      }\n    ]\n  }\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "});",
+                  "// POST /guest returns the GUEST id (unlike POST /checkin).",
+                  "const g = (b.guests || [])[0];",
+                  "if (g && g.uid) {",
+                  "    pm.collectionVariables.set('guestUID', String(g.uid));",
+                  "    pm.collectionVariables.set('newMainGuestUID', String(g.uid));",
+                  "    console.log('captured guestUID =', g.uid);",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "PUT /guest  - edit that escort",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/guest",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guest"
+              ]
+            },
+            "description": "Same envelope and `GuestInfo` shape. Matching is on **`DocumentNumber`**: a guest whose document already exists is updated in place rather than duplicated.\n\nSame checks as the POST with two differences - it also rejects a cancelled stay (40010), and its 50016 *already-on-this-stay* check is commented out in the source, which is exactly what makes it an edit rather than an add.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CheckinUID\": \"{{checkinUID}}\",\n  \"Comment\": \"payload collection - edit an escort already on the checkin\",\n  \"MessageType\": \"GuestUpdateRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-edit-escort-001\",\n  \"Timestamp\": \"2026-08-04T08:45:00\",\n  \"GuestInfo\": {\n    \"UID\": null,\n    \"GuestCode\": \"PC-ESCORT-0500\",\n    \"FirstName\": \"Alan Mathison\",\n    \"LastName\": \"Turing\",\n    \"ArabicName\": \"آلان تورينج\",\n    \"GenderCode\": \"male\",\n    \"Email\": \"alan.m.turing@example.com\",\n    \"Mobile\": \"501550099\",\n    \"ResidenceCountryPhone\": \"971501550099\",\n    \"BirthDate\": \"1990-11-20T00:00:00\",\n    \"BirthPlace\": \"Manchester\",\n    \"NationalityCode\": \"GB\",\n    \"ResidenceCountryCode\": \"AE\",\n    \"RelationshipCode\": \"familyMember\",\n    \"VisitPurposeCode\": \"tourism\",\n    \"CheckinDateTime\": \"2026-08-04T08:30:00\",\n    \"CheckoutDateTime\": null,\n    \"IsMainGuest\": false,\n    \"AttachmentTypeCode\": \"passport\",\n    \"DocumentNumber\": \"GB1122334\",\n    \"IssueCountryCode\": \"GB\",\n    \"IssueDate\": \"2019-05-01T00:00:00\",\n    \"ExpiryDate\": \"2029-05-01T00:00:00\",\n    \"EmirateCode\": null,\n    \"RequiresAccessibility\": false,\n    \"AccessibilityTypes\": [],\n    \"OtherAccessibilityType\": \"\",\n    \"Attachments\": [\n      {\n        \"Id\": 0,\n        \"UID\": null,\n        \"AttachmentCode\": \"PC-DOC-0500\",\n        \"Name\": \"Image_1.jpg\",\n        \"Size\": 160,\n        \"ContentBase64Encoded\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q==\"\n      }\n    ]\n  }\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /guesttable",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/guesttable",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guesttable"
+              ]
+            },
+            "description": "Dump of every guest row."
+          }
+        }
+      ]
+    },
+    {
+      "name": "6. Attachments",
+      "description": "Guest documents. Base64 JPEG, **under 200 KB decoded** (60004). Every payload in this collection carries the same valid 1x1 JPEG so nothing depends on a local file.\n\nImages are resized to 1080x720 and re-encoded at quality 85, written under `BaseDirectoryPath` on the API host **and** stored as a blob in the database - so these endpoints touch the filesystem as well as SQL Server.",
+      "item": [
+        {
+          "name": "POST /guestattachment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/guestattachment",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guestattachment"
+              ]
+            },
+            "description": "Extra documents for a guest already on an open stay.\n\n`GuestUID` is the **guest id** from `GET /guest`, not the checkinguest id.\n\nCodes: 40009, 40010, 40011, 50010 (no `GuestUID`), 60001 (no attachments), 60004 (over 200 KB).\n\nUnlike the other write endpoints this one **de-duplicates filenames**: a second `Image_2.jpg` is stored as `Image_2_1.jpg`. On `POST /checkin` and `POST /guest` there is no such rename, so a guest's second document needs a distinct `Name`.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CheckinUID\": \"{{checkinUID}}\",\n  \"GuestUID\": \"{{guestUID}}\",\n  \"MessageType\": \"GuestAttachmentRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-attachment-001\",\n  \"Timestamp\": \"2026-08-04T09:00:00\",\n  \"Attachments\": [\n    {\n      \"Id\": 0,\n      \"UID\": null,\n      \"AttachmentCode\": \"PC-DOC-EXTRA-0600\",\n      \"Name\": \"Image_2.jpg\",\n      \"Size\": 160,\n      \"ContentBase64Encoded\": \"/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q==\"\n    }\n  ]\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /guestattachment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/guestattachment",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guestattachment"
+              ]
+            },
+            "description": "Attachment metadata rows."
+          }
+        },
+        {
+          "name": "GET /guestdocumentimage",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/guestdocumentimage",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guestdocumentimage"
+              ]
+            },
+            "description": "**Currently fails on the reference database** - returns HTTP 200 with an `{\"error\": \"42S02 Invalid object name ...guestdocumentimages\"}` body. See the known-issues section of the handover report; the `CREATE TABLE` is supplied there."
+          }
+        }
+      ]
+    },
+    {
+      "name": "7. Departure and handover",
+      "description": "Three different ways a stay ends: one guest leaves, everyone leaves, or the whole check-in is cancelled.\n\nAll three enforce the same ordering rule - the timestamp must be after every guest's check-in, after any room change, after any main-guest change, and after the newest escort's check-in **and** check-out.",
+      "item": [
+        {
+          "name": "POST /guestcheckout  - escort leaves",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/guestcheckout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guestcheckout"
+              ]
+            },
+            "description": "One guest departs; the stay continues.\n\n`GuestUID` is a **guest id**. Rules: stay open (40011), `CheckoutDateTime` present (40014), not before that guest's check-in (40032), not in the future (40004), guest not already checked out (50017).",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CheckinUID\": \"{{checkinUID}}\",\n  \"GuestUID\": \"{{guestUID}}\",\n  \"CheckoutDateTime\": \"2026-08-04T10:00:00\",\n  \"NewMainGuestUID\": null,\n  \"MessageType\": \"GuestCheckoutRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-guestcheckout-001\",\n  \"Timestamp\": \"2026-08-04T10:00:00\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "POST /guestcheckout  - MAIN GUEST HANDOVER",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/guestcheckout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guestcheckout"
+              ]
+            },
+            "description": "The main guest leaves and an escort takes over the stay. Driven **entirely** by `NewMainGuestUID` - there is no separate main-guest-change endpoint (`GET /mainguestchange` is a read-only dump).\n\nIn order, the API: writes a `MainGuestChange` row and a log entry; clears `IsMainGuest` on the outgoing guest and copies the incoming guest's relationship onto them; sets `IsMainGuest` on the successor and clears their relationship; snapshots a new `guestversion`; and only then checks the departing guest out.\n\n**Always name a successor.** If the main guest leaves without one, this build does not reject the request - it checks them out and leaves the stay with no main guest, which breaks later `guestversion` writes.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CheckinUID\": \"{{checkinUID}}\",\n  \"GuestUID\": \"{{mainGuestUID}}\",\n  \"CheckoutDateTime\": \"2026-08-04T10:15:00\",\n  \"NewMainGuestUID\": \"{{newMainGuestUID}}\",\n  \"MessageType\": \"GuestCheckoutRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-mainguest-handover-001\",\n  \"Timestamp\": \"2026-08-04T10:15:00\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "POST /checkout  - close the stay",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/checkout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkout"
+              ]
+            },
+            "description": "Closes the stay, frees the room, stamps `CheckoutDate` on every guest still in it, writes a `checkout` row with `CheckoutTypeId = 1`.\n\n40010 if cancelled, 40011 if already checked out, 40034 if before a guest's dates, 40004 if in the future, 40039 if a house-use stay asks for a late check-out.\n\nReturns a **bare** `{\"CheckinUID\": n}` - not the envelope. Only its errors use the envelope.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CheckinUID\": \"{{checkinUID}}\",\n  \"IsLateCheckout\": false,\n  \"CheckoutDateTime\": \"2026-08-04T10:30:00\",\n  \"Comment\": \"payload collection - close the stay\",\n  \"MessageType\": \"CheckoutRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-checkout-001\",\n  \"Timestamp\": \"2026-08-04T10:30:00\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// This endpoint returns a bare {CheckinUID: n} on success;",
+                  "// only its FAILURES use the 1.ID envelope.",
+                  "pm.test('succeeded', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "    pm.expect(b.CheckinUID, 'no CheckinUID returned').to.not.be.undefined;",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "PUT /checkout  - amend a closed stay",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/checkout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkout"
+              ]
+            },
+            "description": "Adjusts a check-out that has already happened. Requires the stay to be **inactive** - 40031 if it is still active, the mirror image of the POST. Same date rules, code 40032.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CheckinUID\": \"{{checkinUID}}\",\n  \"IsLateCheckout\": true,\n  \"CheckoutDateTime\": \"2026-08-04T11:00:00\",\n  \"MessageType\": \"CheckoutUpdateRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-checkout-put-001\",\n  \"Timestamp\": \"2026-08-04T11:00:00\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "pm.test('no errors in envelope', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "POST /checkincancellation",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/checkincancellation",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkincancellation"
+              ]
+            },
+            "description": "Cancels a check-in rather than closing it: writes a `checkout` row with `CheckoutTypeId = 2` and a reason, frees the room, closes out every guest.\n\n`CancellationReasonCode` is `Unhappy` or `UserError`. 40011 if already checked out, 40010 if already cancelled, 40025 if the cancellation predates the check-in, 40004 if in the future - plus a free-text refusal if the current month is later than the check-in's month.\n\n**Run this only on a check-in you created for the test.** Returns a bare `{\"CheckinUID\": n}`.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CheckinUID\": \"{{checkinUID}}\",\n  \"CancellationDateTime\": \"2026-08-04T09:00:00\",\n  \"CancellationReasonCode\": \"UserError\",\n  \"Comment\": \"payload collection - cancel a checkin created for testing\",\n  \"MessageType\": \"CheckinCancellationRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-cancel-001\",\n  \"Timestamp\": \"2026-08-04T09:00:00\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// This endpoint returns a bare {CheckinUID: n} on success;",
+                  "// only its FAILURES use the 1.ID envelope.",
+                  "pm.test('succeeded', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "    pm.expect(b.CheckinUID, 'no CheckinUID returned').to.not.be.undefined;",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /checkout",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/checkout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkout"
+              ]
+            },
+            "description": "All check-out rows."
+          }
+        },
+        {
+          "name": "GET /guestcheckout",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/guestcheckout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "guestcheckout"
+              ]
+            },
+            "description": "All individual guest departures."
+          }
+        },
+        {
+          "name": "GET /checkincancellation",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/checkincancellation",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "checkincancellation"
+              ]
+            },
+            "description": "All cancellation rows."
+          }
+        }
+      ]
+    },
+    {
+      "name": "8. Room change",
+      "description": "Moving an open stay to another room.",
+      "item": [
+        {
+          "name": "POST /roomchange",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/roomchange",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "roomchange"
+              ]
+            },
+            "description": "The date field is **`EffectiveDate`**, not `EffectiveDateTime`.\n\n`NewRoomNumber` must exist (80001) and be free (80003). `EffectiveDate` must not be in the future, and must be after the stay's check-in, after any previous room change, after any main-guest change, and after the newest escort's check-in and check-out.\n\nFrees the old room, flags the new one, rewrites `checkin.RoomNumber`. Returns a bare `{\"CheckinUID\": n}`.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"CheckinUID\": \"{{checkinUID}}\",\n  \"NewRoomNumber\": \"004\",\n  \"EffectiveDate\": \"2026-08-04T09:30:00\",\n  \"Comment\": \"payload collection - move the stay to another room\",\n  \"MessageType\": \"RoomChangeRequest\",\n  \"ClientUID\": \"Establishment101\",\n  \"MessageUID\": null,\n  \"CorrelationUID\": \"test-roomchange-001\",\n  \"Timestamp\": \"2026-08-04T09:30:00\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('HTTP 200', () => pm.response.to.have.status(200));",
+                  "const b = pm.response.json();",
+                  "// This endpoint returns a bare {CheckinUID: n} on success;",
+                  "// only its FAILURES use the 1.ID envelope.",
+                  "pm.test('succeeded', () => {",
+                  "    pm.expect(b.hasErrors, JSON.stringify(b.errorMessages)).to.not.eql(true);",
+                  "    pm.expect(b.CheckinUID, 'no CheckinUID returned').to.not.be.undefined;",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET /roomchange",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/roomchange",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "roomchange"
+              ]
+            },
+            "description": "Room move history."
+          }
+        },
+        {
+          "name": "GET /mainguestchange",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/mainguestchange",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "mainguestchange"
+              ]
+            },
+            "description": "Main-guest handovers, written only by `POST /guestcheckout` with a `NewMainGuestUID`."
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5030",
+      "type": "string"
+    },
+    {
+      "key": "checkinUID",
+      "value": "6",
+      "type": "string"
+    },
+    {
+      "key": "guestUID",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "mainGuestUID",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "newMainGuestUID",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}

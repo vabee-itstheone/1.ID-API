@@ -1,0 +1,19 @@
+{
+  "_comment": "Copy to config.json and fill in. NEVER commit or share a filled-in config.json - it holds the database password in plain text. Paths must use forward slashes; JSON treats a backslash as an escape.",
+
+  "SQLALCHEMY_DATABASE_URI": "mssql+pyodbc://USER:PASSWORD@HOSTNAME\\INSTANCE/itsthe1.id?driver=ODBC+Driver+17+for+SQL+Server",
+  "SCHEMA_NAME": "[itsthe1.id].[itsthe1.id]",
+  "BaseDirectoryPath": "C:/ITSthe1/WPF/DOTS_Storage",
+  "GOOGLE_TRANSLATOR_URL": "https://google.com/transliterate/indic",
+
+  "HOST": "127.0.0.1",
+  "PORT": 5030,
+
+  "StartWithWindows": true,
+
+  "LOG_LEVEL": "INFO",
+  "LOG_MAX_BYTES": 5242880,
+  "LOG_BACKUP_COUNT": 5,
+  "REQUEST_HISTORY_SIZE": 50,
+  "DB_CONNECT_TIMEOUT": 5
+}

@@ -1,0 +1,8 @@
+{
+  "CheckinUID": "6",
+  "MessageType": "CheckinStatusRequest",
+  "ClientUID": "Establishment101",
+  "MessageUID": null,
+  "CorrelationUID": "test-checkin-get-001",
+  "Timestamp": "2026-08-04T08:00:00"
+}

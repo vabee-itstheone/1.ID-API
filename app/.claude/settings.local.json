@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($c = \\(New-Object Net.WebClient\\); try { $c.DownloadString\\('http://127.0.0.1:5030/health'\\) } catch { $s=$_.Exception.InnerException.Response.GetResponseStream\\(\\); \\(New-Object IO.StreamReader\\($s\\)\\).ReadToEnd\\(\\) })",
+      "PowerShell($r = Invoke-WebRequest -Uri http://127.0.0.1:5030/country -UseBasicParsing; $r.Content.Substring\\(0, [Math]::Min\\(500, $r.Content.Length\\)\\))"
+    ]
+  }
+}

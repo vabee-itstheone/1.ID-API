@@ -1,0 +1,60 @@
+{
+  "RoomNumber": "007",
+  "IsEarlyCheckin": true,
+  "CheckinDateTime": "2026-08-04T08:00:00",
+  "PaymentMethodCode": "creditcard",
+  "CreditCardNumber": "4111111111111111",
+  "CreditCardTypeCode": "visa",
+  "PaidAmount": 250.5,
+  "Comment": "payload collection - credit card + early checkin",
+  "IsWaitingForRoom": false,
+  "IsHouseUse": false,
+  "MessageType": "CheckinRequest",
+  "ClientUID": "Establishment101",
+  "MessageUID": null,
+  "CorrelationUID": "test-checkin-card-001",
+  "Timestamp": "2026-08-04T08:00:00",
+  "Guests": [
+    {
+      "UID": null,
+      "GuestCode": "PC-MAIN-0200",
+      "FirstName": "Priya",
+      "LastName": "Nair",
+      "ArabicName": "بريا ناير",
+      "GenderCode": "female",
+      "Email": "priya.nair@example.com",
+      "Mobile": "501220001",
+      "ResidenceCountryPhone": "971501220001",
+      "BirthDate": "1992-09-30T00:00:00",
+      "BirthPlace": "Kochi",
+      "NationalityCode": "IN",
+      "ResidenceCountryCode": "IN",
+      "RelationshipCode": null,
+      "VisitPurposeCode": "medical",
+      "CheckinDateTime": "2026-08-04T08:00:00",
+      "CheckoutDateTime": null,
+      "IsMainGuest": true,
+      "AttachmentTypeCode": "passport",
+      "DocumentNumber": "IN7788990",
+      "IssueCountryCode": "IN",
+      "IssueDate": "2021-06-01T00:00:00",
+      "ExpiryDate": "2031-06-01T00:00:00",
+      "EmirateCode": null,
+      "RequiresAccessibility": true,
+      "AccessibilityTypes": [
+        { "Code": "other" }
+      ],
+      "OtherAccessibilityType": "Requires a wheelchair ramp",
+      "Attachments": [
+        {
+          "Id": 0,
+          "UID": null,
+          "AttachmentCode": "PC-DOC-0200",
+          "Name": "Image_1.jpg",
+          "Size": 160,
+          "ContentBase64Encoded": "/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q=="
+        }
+      ]
+    }
+  ]
+}

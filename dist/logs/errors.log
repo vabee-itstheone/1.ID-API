@@ -1,0 +1,690 @@
+2026-08-07 16:37:55 WARNING  [itsthe1.api] CONFIG PROBLEM : config.json not found. Searched: D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\dist\config.json, C:\Users\PASIND~1\AppData\Local\Temp\_MEI182202\config.json, C:\Users\PASIND~1\AppData\Local\Temp\_MEI182202\app\config.json
+2026-08-07 16:37:55 CRITICAL [itsthe1.api] CONFIG NOT LOADED - the API is running on defaults, NOT on your settings: config.json not found. Searched: D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\dist\config.json, C:\Users\PASIND~1\AppData\Local\Temp\_MEI182202\config.json, C:\Users\PASIND~1\AppData\Local\Temp\_MEI182202\app\config.json
+2026-08-07 16:38:54 WARNING  [itsthe1.api.monitoring] GET /guest -> 400 (0 ms) from 127.0.0.1
+2026-08-07 16:44:08 WARNING  [itsthe1.api.monitoring] GET /checkin -> 400 (0 ms) from 127.0.0.1
+2026-08-07 16:44:19 WARNING  [itsthe1.api.monitoring] GET /guest -> 400 (0 ms) from 127.0.0.1
+2026-08-19 00:05:48 WARNING  [waitress.queue] Task queue depth is 1
+2026-08-19 00:05:48 WARNING  [waitress.queue] Task queue depth is 2
+2026-08-19 00:05:48 WARNING  [waitress.queue] Task queue depth is 3
+2026-08-19 00:05:48 WARNING  [waitress.queue] Task queue depth is 4
+2026-08-19 00:05:48 WARNING  [waitress.queue] Task queue depth is 5
+2026-08-19 00:05:51 WARNING  [waitress.queue] Task queue depth is 6
+2026-08-19 00:05:59 WARNING  [waitress.queue] Task queue depth is 7
+2026-08-19 00:05:59 WARNING  [waitress.queue] Task queue depth is 8
+2026-08-19 00:05:59 WARNING  [waitress.queue] Task queue depth is 9
+2026-08-19 00:05:59 WARNING  [waitress.queue] Task queue depth is 10
+2026-08-19 00:06:01 WARNING  [waitress.queue] Task queue depth is 11
+2026-08-19 00:06:07 WARNING  [waitress.queue] Task queue depth is 12
+2026-08-19 00:06:11 WARNING  [waitress.queue] Task queue depth is 12
+2026-08-19 00:06:13 WARNING  [waitress.queue] Task queue depth is 12
+2026-08-19 00:06:13 WARNING  [waitress.queue] Task queue depth is 13
+2026-08-19 00:06:13 WARNING  [waitress.queue] Task queue depth is 14
+2026-08-19 00:06:18 WARNING  [waitress.queue] Task queue depth is 12
+2026-08-19 00:06:18 WARNING  [waitress.queue] Task queue depth is 13
+2026-08-19 00:06:18 WARNING  [waitress.queue] Task queue depth is 14
+2026-08-19 00:06:18 WARNING  [waitress.queue] Task queue depth is 15
+2026-08-19 00:06:19 WARNING  [waitress.queue] Task queue depth is 16
+2026-08-19 00:06:21 WARNING  [waitress.queue] Task queue depth is 17
+2026-08-19 00:06:23 WARNING  [waitress.queue] Task queue depth is 18
+2026-08-19 00:06:31 WARNING  [waitress.queue] Task queue depth is 18
+2026-08-19 00:06:31 WARNING  [waitress.queue] Task queue depth is 19
+2026-08-19 00:06:41 WARNING  [waitress.queue] Task queue depth is 13
+2026-08-19 00:06:48 WARNING  [waitress.queue] Task queue depth is 14
+2026-08-19 00:06:48 WARNING  [waitress.queue] Task queue depth is 15
+2026-08-19 00:06:48 WARNING  [waitress.queue] Task queue depth is 16
+2026-08-19 00:06:48 WARNING  [waitress.queue] Task queue depth is 17
+2026-08-19 00:06:51 WARNING  [waitress.queue] Task queue depth is 18
+2026-08-19 00:07:00 WARNING  [waitress.queue] Task queue depth is 19
+2026-08-19 00:07:11 WARNING  [waitress.queue] Task queue depth is 14
+2026-08-19 00:07:18 WARNING  [waitress.queue] Task queue depth is 12
+2026-08-19 00:07:18 WARNING  [waitress.queue] Task queue depth is 13
+2026-08-19 00:07:18 WARNING  [waitress.queue] Task queue depth is 14
+2026-08-19 00:07:18 WARNING  [waitress.queue] Task queue depth is 15
+2026-08-19 00:07:20 WARNING  [waitress.queue] Task queue depth is 16
+2026-08-19 00:07:28 WARNING  [waitress.queue] Task queue depth is 17
+2026-08-19 00:07:32 WARNING  [waitress.queue] Task queue depth is 16
+2026-08-19 00:07:41 WARNING  [waitress.queue] Task queue depth is 16
+2026-08-19 00:07:48 WARNING  [waitress.queue] Task queue depth is 17
+2026-08-19 00:07:48 WARNING  [waitress.queue] Task queue depth is 18
+2026-08-19 00:07:48 WARNING  [waitress.queue] Task queue depth is 19
+2026-08-19 00:07:48 WARNING  [waitress.queue] Task queue depth is 20
+2026-08-19 00:07:50 WARNING  [waitress.queue] Task queue depth is 21
+2026-08-19 00:08:01 WARNING  [waitress.queue] Task queue depth is 20
+2026-08-19 00:08:10 WARNING  [waitress.queue] Task queue depth is 19
+2026-08-19 00:08:18 WARNING  [waitress.queue] Task queue depth is 20
+2026-08-19 00:08:18 WARNING  [waitress.queue] Task queue depth is 21
+2026-08-19 00:08:18 WARNING  [waitress.queue] Task queue depth is 22
+2026-08-19 00:08:18 WARNING  [waitress.queue] Task queue depth is 23
+2026-08-19 00:08:20 WARNING  [waitress.queue] Task queue depth is 24
+2026-08-19 00:08:31 WARNING  [waitress.queue] Task queue depth is 25
+2026-08-19 00:08:40 WARNING  [waitress.queue] Task queue depth is 22
+2026-08-19 00:08:48 WARNING  [waitress.queue] Task queue depth is 23
+2026-08-19 00:08:48 WARNING  [waitress.queue] Task queue depth is 24
+2026-08-19 00:08:48 WARNING  [waitress.queue] Task queue depth is 25
+2026-08-19 00:08:48 WARNING  [waitress.queue] Task queue depth is 26
+2026-08-19 00:08:50 WARNING  [waitress.queue] Task queue depth is 27
+2026-08-19 00:09:01 WARNING  [waitress.queue] Task queue depth is 28
+2026-08-19 00:09:12 WARNING  [waitress.queue] Task queue depth is 26
+2026-08-19 00:09:18 WARNING  [waitress.queue] Task queue depth is 26
+2026-08-19 00:09:18 WARNING  [waitress.queue] Task queue depth is 27
+2026-08-19 00:09:18 WARNING  [waitress.queue] Task queue depth is 28
+2026-08-19 00:09:18 WARNING  [waitress.queue] Task queue depth is 29
+2026-08-19 00:09:20 WARNING  [waitress.queue] Task queue depth is 29
+2026-08-19 00:09:30 WARNING  [waitress.queue] Task queue depth is 28
+2026-08-19 00:09:45 WARNING  [waitress.queue] Task queue depth is 28
+2026-08-19 00:10:10 WARNING  [waitress.queue] Task queue depth is 29
+2026-08-19 00:10:10 WARNING  [waitress.queue] Task queue depth is 30
+2026-08-19 00:10:10 WARNING  [waitress.queue] Task queue depth is 31
+2026-08-19 00:10:10 WARNING  [waitress.queue] Task queue depth is 32
+2026-08-19 00:10:11 WARNING  [waitress.queue] Task queue depth is 33
+2026-08-19 00:10:21 WARNING  [waitress.queue] Task queue depth is 34
+2026-08-19 00:10:32 WARNING  [waitress.queue] Task queue depth is 34
+2026-08-19 00:10:34 WARNING  [waitress.queue] Task queue depth is 34
+2026-08-19 00:10:34 WARNING  [waitress.queue] Task queue depth is 34
+2026-08-19 00:10:34 WARNING  [waitress.queue] Task queue depth is 35
+2026-08-19 00:10:34 WARNING  [waitress.queue] Task queue depth is 36
+2026-08-19 00:10:40 WARNING  [waitress.queue] Task queue depth is 36
+2026-08-19 00:10:51 WARNING  [waitress.queue] Task queue depth is 36
+2026-08-19 00:10:52 WARNING  [waitress.queue] Task queue depth is 36
+2026-08-19 00:11:00 WARNING  [waitress.queue] Task queue depth is 35
+2026-08-19 00:11:04 WARNING  [waitress.queue] Task queue depth is 36
+2026-08-19 00:11:04 WARNING  [waitress.queue] Task queue depth is 37
+2026-08-19 00:11:04 WARNING  [waitress.queue] Task queue depth is 38
+2026-08-19 00:11:04 WARNING  [waitress.queue] Task queue depth is 39
+2026-08-19 00:11:10 WARNING  [waitress.queue] Task queue depth is 38
+2026-08-19 00:11:21 WARNING  [waitress.queue] Task queue depth is 38
+2026-08-19 00:11:30 WARNING  [waitress.queue] Task queue depth is 37
+2026-08-19 00:11:34 WARNING  [waitress.queue] Task queue depth is 37
+2026-08-19 00:11:34 WARNING  [waitress.queue] Task queue depth is 38
+2026-08-19 00:11:34 WARNING  [waitress.queue] Task queue depth is 39
+2026-08-19 00:11:34 WARNING  [waitress.queue] Task queue depth is 40
+2026-08-19 00:11:40 WARNING  [waitress.queue] Task queue depth is 39
+2026-08-19 00:11:51 WARNING  [waitress.queue] Task queue depth is 40
+2026-08-19 00:12:00 WARNING  [waitress.queue] Task queue depth is 39
+2026-08-19 00:12:04 WARNING  [waitress.queue] Task queue depth is 40
+2026-08-19 00:12:04 WARNING  [waitress.queue] Task queue depth is 40
+2026-08-19 00:12:04 WARNING  [waitress.queue] Task queue depth is 41
+2026-08-19 00:12:04 WARNING  [waitress.queue] Task queue depth is 42
+2026-08-19 00:12:10 WARNING  [waitress.queue] Task queue depth is 42
+2026-08-19 00:12:20 WARNING  [waitress.queue] Task queue depth is 42
+2026-08-19 00:12:30 WARNING  [waitress.queue] Task queue depth is 41
+2026-08-19 00:12:34 WARNING  [waitress.queue] Task queue depth is 41
+2026-08-19 00:12:34 WARNING  [waitress.queue] Task queue depth is 42
+2026-08-19 00:12:34 WARNING  [waitress.queue] Task queue depth is 43
+2026-08-19 00:12:34 WARNING  [waitress.queue] Task queue depth is 44
+2026-08-19 00:12:40 WARNING  [waitress.queue] Task queue depth is 45
+2026-08-19 00:12:50 WARNING  [waitress.queue] Task queue depth is 44
+2026-08-19 00:12:52 WARNING  [waitress.queue] Task queue depth is 45
+2026-08-19 00:13:01 WARNING  [waitress.queue] Task queue depth is 45
+2026-08-19 00:13:04 WARNING  [waitress.queue] Task queue depth is 45
+2026-08-19 00:13:04 WARNING  [waitress.queue] Task queue depth is 46
+2026-08-19 00:13:04 WARNING  [waitress.queue] Task queue depth is 47
+2026-08-19 00:13:04 WARNING  [waitress.queue] Task queue depth is 48
+2026-08-19 00:13:10 WARNING  [waitress.queue] Task queue depth is 48
+2026-08-19 00:13:20 WARNING  [waitress.queue] Task queue depth is 47
+2026-08-19 00:13:23 WARNING  [waitress.queue] Task queue depth is 48
+2026-08-19 00:13:25 WARNING  [waitress.queue] Task queue depth is 49
+2026-08-19 00:13:31 WARNING  [waitress.queue] Task queue depth is 49
+2026-08-19 00:13:34 WARNING  [waitress.queue] Task queue depth is 50
+2026-08-19 00:13:34 WARNING  [waitress.queue] Task queue depth is 51
+2026-08-19 00:13:34 WARNING  [waitress.queue] Task queue depth is 52
+2026-08-19 00:13:34 WARNING  [waitress.queue] Task queue depth is 53
+2026-08-19 00:13:40 WARNING  [waitress.queue] Task queue depth is 53
+2026-08-19 00:13:50 WARNING  [waitress.queue] Task queue depth is 52
+2026-08-19 00:14:00 WARNING  [waitress.queue] Task queue depth is 52
+2026-08-19 00:14:04 WARNING  [waitress.queue] Task queue depth is 53
+2026-08-19 00:14:04 WARNING  [waitress.queue] Task queue depth is 54
+2026-08-19 00:14:05 WARNING  [waitress.queue] Task queue depth is 55
+2026-08-19 00:14:05 WARNING  [waitress.queue] Task queue depth is 56
+2026-08-19 00:14:10 WARNING  [waitress.queue] Task queue depth is 54
+2026-08-19 00:14:20 WARNING  [waitress.queue] Task queue depth is 54
+2026-08-19 00:14:34 WARNING  [waitress.queue] Task queue depth is 54
+2026-08-19 00:14:35 WARNING  [waitress.queue] Task queue depth is 55
+2026-08-19 00:14:36 WARNING  [waitress.queue] Task queue depth is 56
+2026-08-19 00:14:36 WARNING  [waitress.queue] Task queue depth is 57
+2026-08-19 00:14:36 WARNING  [waitress.queue] Task queue depth is 58
+2026-08-19 00:14:49 WARNING  [waitress.queue] Task queue depth is 59
+2026-08-19 00:14:56 WARNING  [waitress.queue] Task queue depth is 59
+2026-08-19 00:15:07 WARNING  [waitress.queue] Task queue depth is 59
+2026-08-19 00:15:15 WARNING  [waitress.queue] Task queue depth is 60
+2026-08-19 00:15:15 WARNING  [waitress.queue] Task queue depth is 61
+2026-08-19 00:15:15 WARNING  [waitress.queue] Task queue depth is 62
+2026-08-19 00:15:15 WARNING  [waitress.queue] Task queue depth is 63
+2026-08-19 00:15:15 WARNING  [waitress.queue] Task queue depth is 64
+2026-08-19 00:15:21 WARNING  [waitress.queue] Task queue depth is 64
+2026-08-19 00:15:25 WARNING  [waitress.queue] Task queue depth is 64
+2026-08-19 00:15:25 WARNING  [waitress.queue] Task queue depth is 65
+2026-08-19 00:15:25 WARNING  [waitress.queue] Task queue depth is 66
+2026-08-19 00:15:25 WARNING  [waitress.queue] Task queue depth is 67
+2026-08-19 00:15:33 WARNING  [waitress.queue] Task queue depth is 67
+2026-08-19 00:15:40 WARNING  [waitress.queue] Task queue depth is 66
+2026-08-19 00:15:40 WARNING  [waitress.queue] Task queue depth is 67
+2026-08-19 00:15:40 WARNING  [waitress.queue] Task queue depth is 68
+2026-08-19 00:15:41 WARNING  [waitress.queue] Task queue depth is 69
+2026-08-19 00:15:41 WARNING  [waitress.queue] Task queue depth is 70
+2026-08-19 00:15:46 WARNING  [waitress.queue] Task queue depth is 71
+2026-08-19 00:15:50 WARNING  [waitress.queue] Task queue depth is 71
+2026-08-19 00:16:01 WARNING  [waitress.queue] Task queue depth is 71
+2026-08-19 00:16:10 WARNING  [waitress.queue] Task queue depth is 70
+2026-08-19 00:16:10 WARNING  [waitress.queue] Task queue depth is 70
+2026-08-19 00:16:11 WARNING  [waitress.queue] Task queue depth is 71
+2026-08-19 00:16:11 WARNING  [waitress.queue] Task queue depth is 72
+2026-08-19 00:16:11 WARNING  [waitress.queue] Task queue depth is 73
+2026-08-19 00:16:22 WARNING  [waitress.queue] Task queue depth is 73
+2026-08-19 00:16:31 WARNING  [waitress.queue] Task queue depth is 72
+2026-08-19 00:16:40 WARNING  [waitress.queue] Task queue depth is 72
+2026-08-19 00:16:40 WARNING  [waitress.queue] Task queue depth is 72
+2026-08-19 00:16:40 WARNING  [waitress.queue] Task queue depth is 73
+2026-08-19 00:16:41 WARNING  [waitress.queue] Task queue depth is 74
+2026-08-19 00:16:41 WARNING  [waitress.queue] Task queue depth is 75
+2026-08-19 00:16:51 WARNING  [waitress.queue] Task queue depth is 74
+2026-08-19 00:17:00 WARNING  [waitress.queue] Task queue depth is 74
+2026-08-19 00:17:10 WARNING  [waitress.queue] Task queue depth is 72
+2026-08-19 00:17:10 WARNING  [waitress.queue] Task queue depth is 73
+2026-08-19 00:17:11 WARNING  [waitress.queue] Task queue depth is 74
+2026-08-19 00:17:11 WARNING  [waitress.queue] Task queue depth is 75
+2026-08-19 00:17:11 WARNING  [waitress.queue] Task queue depth is 76
+2026-08-19 00:17:21 WARNING  [waitress.queue] Task queue depth is 77
+2026-08-19 00:17:30 WARNING  [waitress.queue] Task queue depth is 76
+2026-08-19 00:17:40 WARNING  [waitress.queue] Task queue depth is 75
+2026-08-19 00:17:40 WARNING  [waitress.queue] Task queue depth is 76
+2026-08-19 00:17:41 WARNING  [waitress.queue] Task queue depth is 77
+2026-08-19 00:17:41 WARNING  [waitress.queue] Task queue depth is 78
+2026-08-19 00:17:41 WARNING  [waitress.queue] Task queue depth is 79
+2026-08-19 00:17:50 WARNING  [waitress.queue] Task queue depth is 76
+2026-08-19 00:18:07 WARNING  [waitress.queue] Task queue depth is 77
+2026-08-19 00:18:33 WARNING  [waitress.queue] Task queue depth is 78
+2026-08-19 00:18:33 WARNING  [waitress.queue] Task queue depth is 79
+2026-08-19 00:18:33 WARNING  [waitress.queue] Task queue depth is 80
+2026-08-19 00:18:34 WARNING  [waitress.queue] Task queue depth is 81
+2026-08-19 00:18:34 WARNING  [waitress.queue] Task queue depth is 82
+2026-08-19 00:18:36 WARNING  [waitress.queue] Task queue depth is 83
+2026-08-19 00:18:44 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:18:44 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:18:47 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:18:48 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:18:48 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:18:48 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:18:50 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:18:50 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:19:00 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:19:10 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:19:18 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:19:18 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:19:18 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:19:18 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:19:18 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:19:20 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:19:20 WARNING  [waitress.queue] Task queue depth is 89
+2026-08-19 00:19:30 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:19:30 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:19:41 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:19:48 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:19:48 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:19:48 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:19:48 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:20:02 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:02 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:20:02 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:02 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:20:03 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:03 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:20:08 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:08 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:20:14 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:14 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:20:28 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:28 WARNING  [waitress.queue] Task queue depth is 83
+2026-08-19 00:20:33 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:33 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:20:36 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:36 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:20:39 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:39 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:20:39 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:39 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:20:42 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:42 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:20:45 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:45 WARNING  [waitress.queue] Task queue depth is 89
+2026-08-19 00:20:48 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:48 WARNING  [waitress.queue] Task queue depth is 90
+2026-08-19 00:20:59 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:20:59 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:21:11 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:21:11 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:21:11 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:21:11 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:21:21 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:21:21 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:21:21 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:21:21 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:21:21 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:21:21 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:21:24 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:21:24 WARNING  [waitress.queue] Task queue depth is 89
+2026-08-19 00:21:26 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:21:26 WARNING  [waitress.queue] Task queue depth is 90
+2026-08-19 00:21:45 WARNING  [waitress.queue] Task queue depth is 79
+2026-08-19 00:21:45 WARNING  [waitress.queue] Task queue depth is 80
+2026-08-19 00:21:45 WARNING  [waitress.queue] Task queue depth is 81
+2026-08-19 00:21:45 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:21:45 WARNING  [waitress.queue] Task queue depth is 82
+2026-08-19 00:22:42 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:22:42 WARNING  [waitress.queue] Task queue depth is 83
+2026-08-19 00:22:44 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:22:44 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:22:47 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:22:47 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:22:48 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:22:48 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:22:50 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:22:50 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:22:52 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:22:52 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:22:52 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:22:52 WARNING  [waitress.queue] Task queue depth is 89
+2026-08-19 00:22:52 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:22:52 WARNING  [waitress.queue] Task queue depth is 90
+2026-08-19 00:23:02 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:23:02 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:23:16 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:23:16 WARNING  [waitress.queue] Task queue depth is 83
+2026-08-19 00:23:17 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:23:17 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:23:26 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:23:26 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:23:27 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:23:27 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:23:30 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:23:30 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:23:31 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:23:31 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:23:33 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:23:33 WARNING  [waitress.queue] Task queue depth is 89
+2026-08-19 00:23:34 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:23:34 WARNING  [waitress.queue] Task queue depth is 90
+2026-08-19 00:24:10 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:24:10 WARNING  [waitress.queue] Task queue depth is 83
+2026-08-19 00:24:14 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:24:14 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:24:16 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:24:16 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:24:17 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:24:17 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:24:23 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:24:23 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:24:27 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:24:27 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:24:29 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:24:29 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:24:31 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:24:31 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:24:47 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:24:47 WARNING  [waitress.queue] Task queue depth is 83
+2026-08-19 00:24:57 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:24:57 WARNING  [waitress.queue] Task queue depth is 83
+2026-08-19 00:25:05 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:25:05 WARNING  [waitress.queue] Task queue depth is 82
+2026-08-19 00:25:07 WARNING  [waitress.queue] Task queue depth is 83
+2026-08-19 00:25:07 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:25:07 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:25:10 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:25:10 WARNING  [waitress.queue] Task queue depth is 83
+2026-08-19 00:25:12 WARNING  [waitress.queue] Task queue depth is 83
+2026-08-19 00:25:12 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:25:12 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:25:23 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:25:23 WARNING  [waitress.queue] Task queue depth is 83
+2026-08-19 00:25:33 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:25:33 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:25:35 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:25:35 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:25:39 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:25:39 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:26:26 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:26:26 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:26:29 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:26:29 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:26:29 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:26:29 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:26:29 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:26:34 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:26:34 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:26:43 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:26:43 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:26:45 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:26:45 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:26:52 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:26:52 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:26:52 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:26:52 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:26:58 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:26:58 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:26:59 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:26:59 WARNING  [waitress.queue] Task queue depth is 89
+2026-08-19 00:27:00 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:27:00 WARNING  [waitress.queue] Task queue depth is 90
+2026-08-19 00:27:10 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:27:10 WARNING  [waitress.queue] Task queue depth is 89
+2026-08-19 00:27:25 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:27:25 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:27:26 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:27:26 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:27:26 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:27:26 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:27:32 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:27:32 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:27:39 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:27:39 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:27:43 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:27:43 WARNING  [waitress.queue] Task queue depth is 89
+2026-08-19 00:27:44 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:27:44 WARNING  [waitress.queue] Task queue depth is 90
+2026-08-19 00:27:49 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:27:49 WARNING  [waitress.queue] Task queue depth is 90
+2026-08-19 00:28:05 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:28:05 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:28:13 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:28:13 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:28:19 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:28:19 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:28:21 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:28:21 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:28:23 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:28:23 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:28:25 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:28:25 WARNING  [waitress.queue] Task queue depth is 89
+2026-08-19 00:28:28 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:28:28 WARNING  [waitress.queue] Task queue depth is 90
+2026-08-19 00:28:43 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:28:43 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:28:56 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:28:56 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:28:57 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:28:57 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:29:02 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:29:02 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:29:03 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:29:03 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:29:07 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:29:07 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:29:12 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:29:12 WARNING  [waitress.queue] Task queue depth is 89
+2026-08-19 00:29:12 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:29:12 WARNING  [waitress.queue] Task queue depth is 90
+2026-08-19 00:29:28 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:29:28 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:29:35 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:29:35 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:29:39 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:29:39 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:29:39 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:29:39 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:30:30 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:30:30 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:30:33 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:30:33 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:30:34 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:30:34 WARNING  [waitress.queue] Task queue depth is 89
+2026-08-19 00:30:35 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:30:35 WARNING  [waitress.queue] Task queue depth is 90
+2026-08-19 00:30:58 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:30:58 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:30:59 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:30:59 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:31:00 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:31:00 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:31:07 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:31:07 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:31:10 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:31:10 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:31:12 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:31:12 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:31:13 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:31:13 WARNING  [waitress.queue] Task queue depth is 89
+2026-08-19 00:31:15 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:31:15 WARNING  [waitress.queue] Task queue depth is 90
+2026-08-19 00:31:37 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:31:37 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:31:43 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:31:43 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:31:44 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:31:44 WARNING  [waitress.queue] Task queue depth is 87
+2026-08-19 00:31:44 WARNING  [waitress] total open connections reached the connection limit, no longer accepting new connections
+2026-08-19 00:31:44 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:31:50 WARNING  [waitress.queue] Task queue depth is 88
+2026-08-19 00:32:01 WARNING  [waitress.queue] Task queue depth is 86
+2026-08-19 00:32:11 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:32:20 WARNING  [waitress.queue] Task queue depth is 84
+2026-08-19 00:32:31 WARNING  [waitress.queue] Task queue depth is 85
+2026-08-19 00:32:41 WARNING  [waitress.queue] Task queue depth is 83
+2026-08-19 00:32:51 WARNING  [waitress.queue] Task queue depth is 82
+2026-08-19 00:33:01 WARNING  [waitress.queue] Task queue depth is 80
+2026-08-19 00:33:10 WARNING  [waitress.queue] Task queue depth is 81
+2026-08-19 00:33:20 WARNING  [waitress.queue] Task queue depth is 80
+2026-08-19 00:33:30 WARNING  [waitress.queue] Task queue depth is 79
+2026-08-19 00:33:41 WARNING  [waitress.queue] Task queue depth is 78
+2026-08-19 00:34:10 WARNING  [waitress.queue] Task queue depth is 78
+2026-08-19 00:34:21 WARNING  [waitress.queue] Task queue depth is 78
+2026-08-19 00:34:24 WARNING  [waitress.queue] Task queue depth is 79
+2026-08-19 00:34:24 WARNING  [waitress.queue] Task queue depth is 80
+2026-08-19 00:34:30 WARNING  [waitress.queue] Task queue depth is 81
+2026-08-19 00:34:40 WARNING  [waitress.queue] Task queue depth is 80
+2026-08-19 00:34:50 WARNING  [waitress.queue] Task queue depth is 78
+2026-08-19 00:35:01 WARNING  [waitress.queue] Task queue depth is 76
+2026-08-19 00:35:10 WARNING  [waitress.queue] Task queue depth is 77
+2026-08-19 00:35:21 WARNING  [waitress.queue] Task queue depth is 76
+2026-08-19 00:35:30 WARNING  [waitress.queue] Task queue depth is 74
+2026-08-19 00:35:42 WARNING  [waitress.queue] Task queue depth is 73
+2026-08-19 00:35:50 WARNING  [waitress.queue] Task queue depth is 73
+2026-08-19 00:36:00 WARNING  [waitress.queue] Task queue depth is 72
+2026-08-19 00:36:10 WARNING  [waitress.queue] Task queue depth is 71
+2026-08-19 00:36:21 WARNING  [waitress.queue] Task queue depth is 70
+2026-08-19 00:36:31 WARNING  [waitress.queue] Task queue depth is 69
+2026-08-19 00:36:41 WARNING  [waitress.queue] Task queue depth is 70
+2026-08-19 00:36:51 WARNING  [waitress.queue] Task queue depth is 68
+2026-08-19 00:37:01 WARNING  [waitress.queue] Task queue depth is 66
+2026-08-19 00:37:11 WARNING  [waitress.queue] Task queue depth is 65
+2026-08-19 00:37:21 WARNING  [waitress.queue] Task queue depth is 66
+2026-08-19 00:37:30 WARNING  [waitress.queue] Task queue depth is 64
+2026-08-19 00:37:41 WARNING  [waitress.queue] Task queue depth is 62
+2026-08-19 00:38:18 WARNING  [waitress.queue] Task queue depth is 63
+2026-08-19 00:38:25 WARNING  [waitress.queue] Task queue depth is 64
+2026-08-19 00:38:25 WARNING  [waitress.queue] Task queue depth is 65
+2026-08-19 00:38:31 WARNING  [waitress.queue] Task queue depth is 64
+2026-08-19 00:38:40 WARNING  [waitress.queue] Task queue depth is 65
+2026-08-19 00:38:50 WARNING  [waitress.queue] Task queue depth is 60
+2026-08-19 00:39:01 WARNING  [waitress.queue] Task queue depth is 61
+2026-08-19 00:39:11 WARNING  [waitress.queue] Task queue depth is 61
+2026-08-19 00:39:20 WARNING  [waitress.queue] Task queue depth is 61
+2026-08-19 00:39:30 WARNING  [waitress.queue] Task queue depth is 60
+2026-08-19 00:39:41 WARNING  [waitress.queue] Task queue depth is 57
+2026-08-19 00:39:51 WARNING  [waitress.queue] Task queue depth is 58
+2026-08-19 00:40:00 WARNING  [waitress.queue] Task queue depth is 57
+2026-08-19 00:40:11 WARNING  [waitress.queue] Task queue depth is 56
+2026-08-19 00:40:21 WARNING  [waitress.queue] Task queue depth is 53
+2026-08-19 00:40:31 WARNING  [waitress.queue] Task queue depth is 54
+2026-08-19 00:40:41 WARNING  [waitress.queue] Task queue depth is 55
+2026-08-19 00:40:51 WARNING  [waitress.queue] Task queue depth is 54
+2026-08-19 00:41:01 WARNING  [waitress.queue] Task queue depth is 53
+2026-08-19 00:41:11 WARNING  [waitress.queue] Task queue depth is 50
+2026-08-19 00:41:21 WARNING  [waitress.queue] Task queue depth is 51
+2026-08-19 00:41:41 WARNING  [waitress.queue] Task queue depth is 52
+2026-08-19 00:41:52 WARNING  [waitress.queue] Task queue depth is 53
+2026-08-19 00:42:00 WARNING  [waitress.queue] Task queue depth is 54
+2026-08-19 00:42:06 WARNING  [waitress.queue] Task queue depth is 55
+2026-08-19 00:42:10 WARNING  [waitress.queue] Task queue depth is 56
+2026-08-19 00:42:22 WARNING  [waitress.queue] Task queue depth is 53
+2026-08-19 00:42:30 WARNING  [waitress.queue] Task queue depth is 50
+2026-08-19 00:42:40 WARNING  [waitress.queue] Task queue depth is 51
+2026-08-19 00:42:50 WARNING  [waitress.queue] Task queue depth is 52
+2026-08-19 00:43:01 WARNING  [waitress.queue] Task queue depth is 50
+2026-08-19 00:43:11 WARNING  [waitress.queue] Task queue depth is 46
+2026-08-19 00:43:21 WARNING  [waitress.queue] Task queue depth is 47
+2026-08-19 00:43:31 WARNING  [waitress.queue] Task queue depth is 48
+2026-08-19 00:43:41 WARNING  [waitress.queue] Task queue depth is 46
+2026-08-19 00:43:51 WARNING  [waitress.queue] Task queue depth is 42
+2026-08-19 00:44:01 WARNING  [waitress.queue] Task queue depth is 43
+2026-08-19 00:44:11 WARNING  [waitress.queue] Task queue depth is 44
+2026-08-19 00:44:22 WARNING  [waitress.queue] Task queue depth is 41
+2026-08-19 00:44:30 WARNING  [waitress.queue] Task queue depth is 38
+2026-08-19 00:44:41 WARNING  [waitress.queue] Task queue depth is 39
+2026-08-19 00:44:51 WARNING  [waitress.queue] Task queue depth is 40
+2026-08-19 00:45:01 WARNING  [waitress.queue] Task queue depth is 39
+2026-08-19 00:45:12 WARNING  [waitress.queue] Task queue depth is 36
+2026-08-19 00:45:52 WARNING  [waitress.queue] Task queue depth is 35
+2026-08-19 00:46:02 WARNING  [waitress.queue] Task queue depth is 36
+2026-08-19 00:46:11 WARNING  [waitress.queue] Task queue depth is 37
+2026-08-19 00:46:21 WARNING  [waitress.queue] Task queue depth is 33
+2026-08-19 00:46:30 WARNING  [waitress.queue] Task queue depth is 31
+2026-08-19 00:46:41 WARNING  [waitress.queue] Task queue depth is 32
+2026-08-19 00:46:51 WARNING  [waitress.queue] Task queue depth is 29
+2026-08-19 00:47:01 WARNING  [waitress.queue] Task queue depth is 26
+2026-08-19 00:47:11 WARNING  [waitress.queue] Task queue depth is 27
+2026-08-19 00:47:21 WARNING  [waitress.queue] Task queue depth is 28
+2026-08-19 00:47:31 WARNING  [waitress.queue] Task queue depth is 22
+2026-08-19 00:47:41 WARNING  [waitress.queue] Task queue depth is 22
+2026-08-19 00:47:50 WARNING  [waitress.queue] Task queue depth is 23
+2026-08-19 00:48:00 WARNING  [waitress.queue] Task queue depth is 19
+2026-08-19 00:48:11 WARNING  [waitress.queue] Task queue depth is 18
+2026-08-19 00:48:21 WARNING  [waitress.queue] Task queue depth is 18
+2026-08-19 00:48:30 WARNING  [waitress.queue] Task queue depth is 19
+2026-08-19 00:48:40 WARNING  [waitress.queue] Task queue depth is 16
+2026-08-19 00:48:51 WARNING  [waitress.queue] Task queue depth is 14
+2026-08-19 00:49:00 WARNING  [waitress.queue] Task queue depth is 14
+2026-08-19 00:49:10 WARNING  [waitress.queue] Task queue depth is 14
+2026-08-19 00:50:01 WARNING  [waitress.queue] Task queue depth is 11
+2026-08-19 00:50:10 WARNING  [waitress.queue] Task queue depth is 10
+2026-08-19 00:50:21 WARNING  [waitress.queue] Task queue depth is 10
+2026-08-19 00:50:31 WARNING  [waitress.queue] Task queue depth is 11
+2026-08-19 00:50:40 WARNING  [waitress.queue] Task queue depth is 7
+2026-08-19 00:50:50 WARNING  [waitress.queue] Task queue depth is 7
+2026-08-19 00:51:01 WARNING  [waitress.queue] Task queue depth is 7
+2026-08-19 00:51:11 WARNING  [waitress.queue] Task queue depth is 6
+2026-08-19 00:51:21 WARNING  [waitress.queue] Task queue depth is 3
+2026-08-19 00:51:30 WARNING  [waitress.queue] Task queue depth is 3
+2026-08-19 00:51:41 WARNING  [waitress.queue] Task queue depth is 3
+2026-08-19 00:51:51 WARNING  [waitress.queue] Task queue depth is 1
+2026-08-19 10:35:48 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (708 ms) from 192.168.110.59
+2026-08-19 10:36:57 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (75 ms) from 192.168.110.59
+2026-08-19 10:40:27 WARNING  [itsthe1.api.monitoring] GET /room -> 200 (5073 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:40:36 WARNING  [itsthe1.api.monitoring] GET /paymenttype -> 200 (5015 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:40:41 WARNING  [itsthe1.api.monitoring] GET /cardtype -> 200 (5009 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:40:46 WARNING  [itsthe1.api.monitoring] GET /accessibilitytype -> 200 (5005 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:40:49 WARNING  [itsthe1.api.monitoring] GET /room -> 200 (5010 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:40:51 WARNING  [itsthe1.api.monitoring] GET /cancellationreason -> 200 (5023 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:40:56 WARNING  [itsthe1.api.monitoring] GET /dtcmaction -> 200 (5022 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:41:01 WARNING  [itsthe1.api.monitoring] GET /checkinguest -> 200 (5025 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:41:06 WARNING  [itsthe1.api.monitoring] GET /guesttable -> 200 (5020 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:41:10 ERROR    [itsthe1.api.monitoring] Database health check failed: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:41:11 WARNING  [itsthe1.api.monitoring] GET /guestattachment -> 200 (5026 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:41:16 WARNING  [itsthe1.api.monitoring] GET /checkout -> 200 (5035 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:41:22 WARNING  [itsthe1.api.monitoring] GET /roomchange -> 200 (5048 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:41:27 WARNING  [itsthe1.api.monitoring] GET /log -> 200 (5020 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:41:32 WARNING  [itsthe1.api.monitoring] GET /payment -> 200 (5023 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:41:37 WARNING  [itsthe1.api.monitoring] GET /mainguestchange -> 200 (5021 ms) from 192.168.110.59 | (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-19 10:43:48 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (58 ms) from 192.168.110.59
+2026-08-19 10:43:52 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (22 ms) from 192.168.110.59
+2026-08-19 11:06:08 WARNING  [itsthe1.api.monitoring] GET /guestdocumentimage -> 200 (3 ms) from 127.0.0.1 | (pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid object name 'president_hotel.itsthe1.id.guestdocumentimages'. (208) (SQLExecDirectW)")
+[SQL: SELECT president_hotel.[itsthe1.id].guestdocumentimages.[DocumentId] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_DocumentId], president_hotel.[itsthe1.id].guestdocumentimages.[GuestId] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_GuestId], president_hotel.[itsthe1.id].guestdocumentimages.[DocumentUID] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_DocumentUID], president_hotel.[itsthe1.id].guestdocumentimages.[AttachmentCode] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_AttachmentCode], president_hotel.[itsthe1.id].guestdocumentimages.[FileName] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_FileName], president_hotel.[itsthe1.id].guestdocumentimages.[FileSizeKB] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_FileSizeKB], president_hotel.[itsthe1.id].guestdocumentimages.[ImageData] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_ImageData], president_hotel.[itsthe1.id].guestdocumentimages.[UploadedAt] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_UploadedAt] 
+FROM president_hotel.[itsthe1.id].guestdocumentimages]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-08-19 11:07:35 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (69 ms) from 127.0.0.1
+2026-08-19 11:08:22 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (79 ms) from 127.0.0.1
+2026-08-19 11:08:24 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (26 ms) from 127.0.0.1
+2026-08-19 11:08:26 WARNING  [itsthe1.api.monitoring] POST /checkin -> 500 (55 ms) from 127.0.0.1
+2026-08-19 11:08:28 WARNING  [itsthe1.api.monitoring] POST /checkin -> 500 (35 ms) from 127.0.0.1
+2026-08-19 11:08:51 WARNING  [itsthe1.api.monitoring] POST /checkin -> 500 (1595 ms) from 127.0.0.1
+2026-08-19 12:07:41 WARNING  [app.utilities.attachment_store] guestdocumentimages is not usable ((pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid object name 'president_hotel.itsthe1.id.guestdocumentimages'. (208) (SQLExecDirectW); [42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+[SQL: SELECT president_hotel.[itsthe1.id].guestdocumentimages.[DocumentId] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_DocumentId], president_hotel.[itsthe1.id].guestdocumentimages.[GuestId] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_GuestId], president_hotel.[itsthe1.id].guestdocumentimages.[DocumentUID] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_DocumentUID], president_hotel.[itsthe1.id].guestdocumentimages.[AttachmentCode] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_AttachmentCode], president_hotel.[itsthe1.id].guestdocumentimages.[FileName] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_FileName], president_hotel.[itsthe1.id].guestdocumentimages.[FileSizeKB] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_FileSizeKB], president_hotel.[itsthe1.id].guestdocumentimages.[ImageData] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_ImageData], president_hotel.[itsthe1.id].guestdocumentimages.[UploadedAt] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_UploadedAt] 
+FROM president_hotel.[itsthe1.id].guestdocumentimages 
+WHERE president_hotel.[itsthe1.id].guestdocumentimages.[GuestId] = ? AND president_hotel.[itsthe1.id].guestdocumentimages.[FileName] = ?]
+[parameters: (73784, 'IT81912740-M_1.jpg')]
+(Background on this error at: https://sqlalche.me/e/20/f405)). Document images will be stored under BaseDirectoryPath only. Set DocumentImageStorage to "database" once the table exists, or to "filesystem" to silence this.
+2026-08-19 12:07:46 WARNING  [itsthe1.api.monitoring] POST /guestcheckout -> 400 (15 ms) from 127.0.0.1
+2026-08-19 12:07:48 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (2 ms) from 127.0.0.1
+2026-08-19 12:07:48 WARNING  [waitress.queue] Task queue depth is 1
+2026-08-19 12:07:48 WARNING  [waitress.queue] Task queue depth is 2
+2026-08-19 12:07:48 WARNING  [waitress.queue] Task queue depth is 3
+2026-08-19 12:07:48 WARNING  [waitress.queue] Task queue depth is 4
+2026-08-19 12:07:48 WARNING  [waitress.queue] Task queue depth is 5
+2026-08-19 12:07:48 WARNING  [waitress.queue] Task queue depth is 6
+2026-08-19 12:39:57 WARNING  [itsthe1.api.monitoring] POST /guestcheckout -> 400 (15 ms) from 127.0.0.1
+2026-08-19 17:17:39 WARNING  [itsthe1.api.monitoring] POST /checkout -> 400 (18 ms) from 192.168.110.59
+2026-08-24 13:24:11 CRITICAL [itsthe1.api] Port 5030 is already in use on 127.0.0.1 - refusing to start.
+2026-08-24 13:24:11 CRITICAL [itsthe1.api] Another instance of this API is almost certainly already running. Quit it from its tray icon, or find it with: netstat -ano | findstr :5030
+2026-08-24 13:24:51 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (36 ms) from 127.0.0.1
+2026-08-24 13:25:11 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (92 ms) from 127.0.0.1
+2026-08-24 13:25:26 WARNING  [app.utilities.attachment_store] guestdocumentimages is not usable ((pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid object name 'president_hotel.itsthe1.id.guestdocumentimages'. (208) (SQLExecDirectW); [42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+[SQL: SELECT president_hotel.[itsthe1.id].guestdocumentimages.[DocumentId] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_DocumentId], president_hotel.[itsthe1.id].guestdocumentimages.[GuestId] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_GuestId], president_hotel.[itsthe1.id].guestdocumentimages.[DocumentUID] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_DocumentUID], president_hotel.[itsthe1.id].guestdocumentimages.[AttachmentCode] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_AttachmentCode], president_hotel.[itsthe1.id].guestdocumentimages.[FileName] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_FileName], president_hotel.[itsthe1.id].guestdocumentimages.[FileSizeKB] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_FileSizeKB], president_hotel.[itsthe1.id].guestdocumentimages.[ImageData] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_ImageData], president_hotel.[itsthe1.id].guestdocumentimages.[UploadedAt] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_UploadedAt] 
+FROM president_hotel.[itsthe1.id].guestdocumentimages 
+WHERE president_hotel.[itsthe1.id].guestdocumentimages.[GuestId] = ? AND president_hotel.[itsthe1.id].guestdocumentimages.[FileName] = ?]
+[parameters: (73792, 'Image_1.jpg')]
+(Background on this error at: https://sqlalche.me/e/20/f405)). Document images will be stored under BaseDirectoryPath only. Set DocumentImageStorage to "database" once the table exists, or to "filesystem" to silence this.
+2026-08-31 11:39:19 WARNING  [itsthe1.api.monitoring] GET /checkin -> 400 (2 ms) from 127.0.0.1
+2026-08-31 11:42:43 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (19 ms) from 127.0.0.1
+2026-08-31 11:42:56 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (117 ms) from 127.0.0.1
+2026-08-31 11:43:35 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (110 ms) from 127.0.0.1
+2026-08-31 11:45:24 WARNING  [itsthe1.api.monitoring] POST /checkin -> 200 (51 ms) from 127.0.0.1 | general: 50014 Guest Checkin date is before Checkin date
+2026-08-31 11:52:46 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (13 ms) from 127.0.0.1
+2026-08-31 11:53:03 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (16 ms) from 127.0.0.1
+2026-08-31 11:54:39 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (38 ms) from 127.0.0.1
+2026-08-31 11:54:50 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (7 ms) from 127.0.0.1
+2026-08-31 11:55:02 WARNING  [itsthe1.api.monitoring] POST /checkin -> 500 (2 ms) from 127.0.0.1
+2026-08-31 11:55:30 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (15 ms) from 127.0.0.1
+2026-08-31 11:57:24 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (22 ms) from 127.0.0.1
+2026-08-31 11:57:58 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (21 ms) from 127.0.0.1
+2026-08-31 11:58:23 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (9 ms) from 127.0.0.1
+2026-08-31 11:58:45 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (6 ms) from 127.0.0.1
+2026-08-31 11:59:14 WARNING  [itsthe1.api.monitoring] POST /checkin -> 200 (3 ms) from 127.0.0.1 | general: 50014 Guest Checkin date is before Checkin date
+2026-08-31 11:59:42 WARNING  [itsthe1.api.monitoring] POST /checkin -> 200 (7 ms) from 127.0.0.1 | general: 50014 Guest Checkin date is before Checkin date
+2026-08-31 14:48:41 WARNING  [itsthe1.api.monitoring] GET /changes -> 404 (0 ms) from 127.0.0.1
+2026-08-31 14:48:51 WARNING  [itsthe1.api.monitoring] GET /changes -> 404 (0 ms) from 127.0.0.1
+2026-08-31 14:58:33 WARNING  [itsthe1.api.monitoring] GET /changes?wait=25 -> 404 (0 ms) from 127.0.0.1
+2026-08-31 15:35:09 WARNING  [itsthe1.api.monitoring] GET /changes?wait=25 -> 404 (0 ms) from 127.0.0.1
+2026-08-31 15:48:34 WARNING  [itsthe1.api.monitoring] GET /changes?wait=25 -> 404 (0 ms) from 127.0.0.1
+2026-08-31 16:07:52 WARNING  [itsthe1.api.monitoring] POST /guest -> 400 (14 ms) from 127.0.0.1
+2026-08-31 16:08:22 WARNING  [itsthe1.api.monitoring] POST /guest -> 400 (72 ms) from 127.0.0.1
+2026-08-31 16:08:24 WARNING  [itsthe1.api.monitoring] POST /guest -> 400 (14 ms) from 127.0.0.1
+2026-08-31 16:08:33 WARNING  [itsthe1.api.monitoring] POST /guest -> 400 (3 ms) from 127.0.0.1
+2026-08-31 16:15:57 WARNING  [itsthe1.api.monitoring] GET /changes?wait=25 -> 404 (0 ms) from 127.0.0.1
+2026-08-31 16:20:23 WARNING  [itsthe1.api.monitoring] GET /changes?wait=25 -> 404 (0 ms) from 192.168.110.59
+2026-08-31 16:23:03 WARNING  [itsthe1.api.monitoring] GET /changes?wait=25 -> 404 (0 ms) from 192.168.110.59
+2026-08-31 16:27:15 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (54 ms) from 192.168.110.59
+2026-08-31 16:27:35 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (10 ms) from 192.168.110.59
+2026-08-31 16:28:46 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (63 ms) from 192.168.110.59
+2026-08-31 16:28:53 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (16 ms) from 192.168.110.59
+2026-08-31 16:28:55 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (109 ms) from 192.168.110.59
+2026-08-31 16:28:56 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (16 ms) from 192.168.110.59
+2026-08-31 16:28:56 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (84 ms) from 192.168.110.59
+2026-08-31 16:28:57 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (15 ms) from 192.168.110.59
+2026-08-31 16:28:57 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (10 ms) from 192.168.110.59
+2026-08-31 16:28:57 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (17 ms) from 192.168.110.59
+2026-08-31 16:28:57 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (14 ms) from 192.168.110.59
+2026-08-31 16:29:16 WARNING  [itsthe1.api.monitoring] GET /changes?wait=25 -> 404 (0 ms) from 192.168.110.59
+2026-09-08 16:05:53 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (72 ms) from 127.0.0.1
+2026-09-08 16:19:10 WARNING  [itsthe1.api.monitoring] POST /checkin        http://localhost:5030/checkin         -> 404 (1 ms) from 127.0.0.1
+2026-09-08 16:19:23 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (13 ms) from 127.0.0.1
+2026-09-08 17:25:25 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (116 ms) from 127.0.0.1
+2026-09-08 17:25:58 WARNING  [itsthe1.api.monitoring] POST /checkin -> 500 (18 ms) from 127.0.0.1
+2026-09-08 17:35:23 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (17 ms) from 127.0.0.1
+2026-09-08 17:35:38 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (98 ms) from 127.0.0.1
+2026-09-08 17:36:10 WARNING  [itsthe1.api.monitoring] POST /checkin -> 500 (14 ms) from 127.0.0.1
+2026-09-08 17:39:45 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (58 ms) from 127.0.0.1

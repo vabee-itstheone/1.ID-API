@@ -1,0 +1,58 @@
+{
+  "RoomNumber": "003",
+  "IsEarlyCheckin": false,
+  "CheckinDateTime": "2026-08-04T08:00:00",
+  "PaymentMethodCode": "cash",
+  "CreditCardNumber": null,
+  "CreditCardTypeCode": null,
+  "PaidAmount": 0,
+  "Comment": "payload collection - simple cash checkin",
+  "IsWaitingForRoom": false,
+  "IsHouseUse": false,
+  "MessageType": "CheckinRequest",
+  "ClientUID": "Establishment101",
+  "MessageUID": null,
+  "CorrelationUID": "test-checkin-cash-001",
+  "Timestamp": "2026-08-04T08:00:00",
+  "Guests": [
+    {
+      "UID": null,
+      "GuestCode": "PC-MAIN-0001",
+      "FirstName": "John",
+      "LastName": "Smith",
+      "ArabicName": "جون سميث",
+      "GenderCode": "male",
+      "Email": "john.smith@example.com",
+      "Mobile": "501234567",
+      "ResidenceCountryPhone": "971501234567",
+      "BirthDate": "1985-06-14T00:00:00",
+      "BirthPlace": "London",
+      "NationalityCode": "GB",
+      "ResidenceCountryCode": "AE",
+      "RelationshipCode": null,
+      "VisitPurposeCode": "tourism",
+      "CheckinDateTime": "2026-08-04T08:00:00",
+      "CheckoutDateTime": null,
+      "IsMainGuest": true,
+      "AttachmentTypeCode": "passport",
+      "DocumentNumber": "GB9876543",
+      "IssueCountryCode": "GB",
+      "IssueDate": "2020-01-15T00:00:00",
+      "ExpiryDate": "2030-01-15T00:00:00",
+      "EmirateCode": null,
+      "RequiresAccessibility": false,
+      "AccessibilityTypes": [],
+      "OtherAccessibilityType": "",
+      "Attachments": [
+        {
+          "Id": 0,
+          "UID": null,
+          "AttachmentCode": "PC-DOC-MAIN-0001",
+          "Name": "Image_1.jpg",
+          "Size": 160,
+          "ContentBase64Encoded": "/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q=="
+        }
+      ]
+    }
+  ]
+}

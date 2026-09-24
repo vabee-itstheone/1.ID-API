@@ -1,0 +1,11 @@
+{
+  "CheckinUID": "REPLACE_WITH_CHECKIN_UID",
+  "NewRoomNumber": "004",
+  "EffectiveDate": "2026-08-04T09:30:00",
+  "Comment": "payload collection - move the stay to another room",
+  "MessageType": "RoomChangeRequest",
+  "ClientUID": "Establishment101",
+  "MessageUID": null,
+  "CorrelationUID": "test-roomchange-001",
+  "Timestamp": "2026-08-04T09:30:00"
+}

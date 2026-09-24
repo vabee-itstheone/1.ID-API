@@ -1,0 +1,11 @@
+{
+  "CheckinUID": "REPLACE_WITH_CHECKIN_UID",
+  "GuestUID": "REPLACE_WITH_GUEST_ID",
+  "CheckoutDateTime": "2026-08-04T10:00:00",
+  "NewMainGuestUID": null,
+  "MessageType": "GuestCheckoutRequest",
+  "ClientUID": "Establishment101",
+  "MessageUID": null,
+  "CorrelationUID": "test-guestcheckout-001",
+  "Timestamp": "2026-08-04T10:00:00"
+}

@@ -1,0 +1,934 @@
+2026-08-07 12:03:30 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 12:03:30 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 12:03:30 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/itsthe1.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:03:30 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:03:30 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 12:03:30 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 12:03:30 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 12:03:30 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 12:03:30 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 12:03:30 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/itsthe1.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:03:30 INFO     [itsthe1.api] Schema         : [itsthe1.id].[itsthe1.id]
+2026-08-07 12:03:30 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 12:03:30 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 12:03:30 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:03:31 CRITICAL [itsthe1.api] Port 5030 is already in use on 127.0.0.1 - refusing to start.
+2026-08-07 12:03:31 CRITICAL [itsthe1.api] Another instance of this API is almost certainly already running. Quit it from its tray icon, or find it with: netstat -ano | findstr :5030
+2026-08-07 12:03:34 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 12:03:34 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 12:03:34 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/itsthe1.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:03:34 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:03:34 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 12:03:34 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 12:03:34 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 12:03:34 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 12:03:34 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 12:03:34 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/itsthe1.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:03:34 INFO     [itsthe1.api] Schema         : [itsthe1.id].[itsthe1.id]
+2026-08-07 12:03:34 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 12:03:34 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 12:03:34 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:03:34 CRITICAL [itsthe1.api] Port 5030 is already in use on 127.0.0.1 - refusing to start.
+2026-08-07 12:03:34 CRITICAL [itsthe1.api] Another instance of this API is almost certainly already running. Quit it from its tray icon, or find it with: netstat -ano | findstr :5030
+2026-08-07 12:03:41 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 12:03:41 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 12:03:41 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/itsthe1.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:03:41 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:03:41 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 12:03:41 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 12:03:41 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 12:03:41 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 12:03:41 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 12:03:41 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/itsthe1.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:03:41 INFO     [itsthe1.api] Schema         : [itsthe1.id].[itsthe1.id]
+2026-08-07 12:03:41 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 12:03:41 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 12:03:41 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:03:41 CRITICAL [itsthe1.api] Port 5030 is already in use on 127.0.0.1 - refusing to start.
+2026-08-07 12:03:41 CRITICAL [itsthe1.api] Another instance of this API is almost certainly already running. Quit it from its tray icon, or find it with: netstat -ano | findstr :5030
+2026-08-07 12:03:53 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 12:03:53 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 12:03:53 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/itsthe1.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:03:53 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:03:53 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 12:03:53 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 12:03:53 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 12:03:53 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 12:03:53 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 12:03:53 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/itsthe1.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:03:53 INFO     [itsthe1.api] Schema         : [itsthe1.id].[itsthe1.id]
+2026-08-07 12:03:53 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 12:03:53 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 12:03:53 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:03:54 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 12:04:39 WARNING  [itsthe1.api.monitoring] POST /guest -> 500 (30 ms) from 127.0.0.1
+2026-08-07 12:05:02 WARNING  [itsthe1.api.monitoring] POST /guest -> 500 (2 ms) from 127.0.0.1
+2026-08-07 12:05:11 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (6 ms) from 127.0.0.1
+2026-08-07 12:05:38 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (8 ms) from 127.0.0.1
+2026-08-07 12:06:05 INFO     [itsthe1.api] Quit selected from the tray icon - shutting down
+2026-08-07 12:06:05 INFO     [itsthe1.api] Tray icon closed; process exiting
+2026-08-07 12:06:37 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 12:06:37 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 12:06:37 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dot.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:06:37 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:06:37 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 12:06:37 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 12:06:37 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 12:06:37 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 12:06:37 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 12:06:37 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dot.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:06:37 INFO     [itsthe1.api] Schema         : [itsthe1.id].[itsthe1.id]
+2026-08-07 12:06:37 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 12:06:37 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 12:06:37 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:06:38 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 12:06:41 ERROR    [itsthe1.api.monitoring] Database health check failed: (pyodbc.InterfaceError) ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'sa\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "dot.id" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'sa\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "dot.id" requested by the login. The login failed. (4060)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2026-08-07 12:07:03 INFO     [itsthe1.api] Quit selected from the tray icon - shutting down
+2026-08-07 12:07:03 INFO     [itsthe1.api] Tray icon closed; process exiting
+2026-08-07 12:07:09 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 12:07:09 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 12:07:09 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dot.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:07:09 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:07:09 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 12:07:09 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 12:07:09 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 12:07:09 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 12:07:09 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 12:07:09 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dot.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:07:09 INFO     [itsthe1.api] Schema         : [dots.id].[itsthe1.id]
+2026-08-07 12:07:09 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 12:07:09 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 12:07:09 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:07:10 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 12:07:13 ERROR    [itsthe1.api.monitoring] Database health check failed: (pyodbc.InterfaceError) ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'sa\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "dot.id" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'sa\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "dot.id" requested by the login. The login failed. (4060)')
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+2026-08-07 12:07:51 INFO     [itsthe1.api] Quit selected from the tray icon - shutting down
+2026-08-07 12:07:51 INFO     [itsthe1.api] Tray icon closed; process exiting
+2026-08-07 12:07:55 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 12:07:55 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 12:07:55 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:07:55 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:07:55 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 12:07:55 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 12:07:55 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 12:07:55 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 12:07:55 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 12:07:55 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:07:55 INFO     [itsthe1.api] Schema         : [dots.id].[itsthe1.id]
+2026-08-07 12:07:55 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 12:07:55 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 12:07:55 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:07:56 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 12:08:34 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1159 ms) from 127.0.0.1
+2026-08-07 12:09:36 INFO     [itsthe1.api.monitoring] POST /guest -> 201 (1134 ms) from 127.0.0.1
+2026-08-07 12:11:09 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1006 ms) from 127.0.0.1
+2026-08-07 12:19:04 INFO     [itsthe1.api] Quit selected from the tray icon - shutting down
+2026-08-07 12:19:04 INFO     [itsthe1.api] Tray icon closed; process exiting
+2026-08-07 12:19:09 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 12:19:09 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 12:19:09 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:19:09 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:19:09 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 12:19:09 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 12:19:09 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 12:19:09 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 12:19:09 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 12:19:09 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:19:09 INFO     [itsthe1.api] Schema         : [dots.id].[itsthe1.id]
+2026-08-07 12:19:09 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 12:19:09 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 12:19:09 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:19:10 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 12:19:36 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (937 ms) from 127.0.0.1
+2026-08-07 12:21:01 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1288 ms) from 127.0.0.1
+2026-08-07 12:28:55 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 12:28:55 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 12:28:55 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:38:03 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 12:38:03 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 12:38:03 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:53:33 INFO     [itsthe1.api] Quit selected from the tray icon - shutting down
+2026-08-07 12:53:33 INFO     [itsthe1.api] Tray icon closed; process exiting
+2026-08-07 12:53:35 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 12:53:35 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 12:53:35 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:53:35 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:53:35 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 12:53:35 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 12:53:35 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 12:53:35 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 12:53:35 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 12:53:35 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 12:53:35 INFO     [itsthe1.api] Schema         : [dots.id].[itsthe1.id]
+2026-08-07 12:53:35 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 12:53:35 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 12:53:35 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 12:53:36 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 13:00:04 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (984 ms) from 127.0.0.1
+2026-08-07 13:05:49 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (3772 ms) from 127.0.0.1
+2026-08-07 14:00:15 INFO     [itsthe1.api.monitoring] GET /guestattachment -> 200 (6 ms) from 127.0.0.1
+2026-08-07 14:01:36 INFO     [itsthe1.api.monitoring] GET /checkout -> 200 (5 ms) from 127.0.0.1
+2026-08-07 14:03:42 INFO     [itsthe1.api] Quit selected from the tray icon - shutting down
+2026-08-07 14:03:42 INFO     [itsthe1.api] Tray icon closed; process exiting
+2026-08-07 14:03:44 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 14:03:44 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 14:03:44 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:03:44 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:03:44 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 14:03:44 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 14:03:44 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 14:03:44 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 14:03:44 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 14:03:44 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:03:44 INFO     [itsthe1.api] Schema         : [dots.id].[itsthe1.id]
+2026-08-07 14:03:44 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 14:03:44 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 14:03:44 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:03:45 INFO     [itsthe1.api] Autostart entry created: "C:\Python313\pythonw.exe" "D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\run.py"
+2026-08-07 14:03:45 INFO     [itsthe1.api] Start with Windows: on
+2026-08-07 14:03:45 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 14:03:57 INFO     [itsthe1.api] Autostart disabled
+2026-08-07 14:03:57 INFO     [itsthe1.api] Saved StartWithWindows = False to D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 14:04:00 INFO     [itsthe1.api] Autostart enabled: "C:\Python313\pythonw.exe" "D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\run.py"
+2026-08-07 14:04:00 INFO     [itsthe1.api] Saved StartWithWindows = True to D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 14:04:09 INFO     [itsthe1.api] Autostart disabled
+2026-08-07 14:04:09 INFO     [itsthe1.api] Saved StartWithWindows = False to D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 14:04:15 INFO     [itsthe1.api] Autostart enabled: "C:\Python313\pythonw.exe" "D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\run.py"
+2026-08-07 14:04:15 INFO     [itsthe1.api] Saved StartWithWindows = True to D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 14:04:50 INFO     [itsthe1.api.monitoring] POST /roomchange -> 201 (173 ms) from 127.0.0.1
+2026-08-07 14:06:22 INFO     [itsthe1.api] Quit selected from the tray icon - shutting down
+2026-08-07 14:06:22 INFO     [itsthe1.api] Tray icon closed; process exiting
+2026-08-07 14:06:23 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 14:06:23 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 14:06:23 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:06:23 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:06:23 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 14:06:23 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 14:06:23 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 14:06:23 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 14:06:23 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 14:06:23 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:06:23 INFO     [itsthe1.api] Schema         : [dots.id].[itsthe1.id]
+2026-08-07 14:06:23 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 14:06:23 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 14:06:23 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:06:24 INFO     [itsthe1.api] Start with Windows: on
+2026-08-07 14:06:24 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 14:09:54 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 14:09:54 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 14:09:54 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:09:54 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:09:54 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 14:09:54 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 14:09:54 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 14:09:54 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 14:09:54 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 14:09:54 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:09:54 INFO     [itsthe1.api] Schema         : [dots.id].[itsthe1.id]
+2026-08-07 14:09:54 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 14:09:54 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 14:09:54 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:09:55 INFO     [itsthe1.api] Start with Windows: on
+2026-08-07 14:09:56 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 14:10:03 INFO     [itsthe1.api] Quit selected from the tray icon - shutting down
+2026-08-07 14:10:03 INFO     [itsthe1.api] Tray icon closed; process exiting
+2026-08-07 14:13:01 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 14:13:01 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 14:13:01 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:13:01 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:13:01 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 14:13:01 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 14:13:01 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 14:13:01 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 14:13:01 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 14:13:01 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:13:01 INFO     [itsthe1.api] Schema         : [dots.id].[itsthe1.id]
+2026-08-07 14:13:01 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 14:13:01 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 14:13:01 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:13:02 INFO     [itsthe1.api] Start with Windows: on
+2026-08-07 14:13:02 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 14:13:08 INFO     [itsthe1.api] Quit selected from the tray icon - shutting down
+2026-08-07 14:13:08 INFO     [itsthe1.api] Tray icon closed; process exiting
+2026-08-07 14:13:21 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 14:13:21 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 14:13:21 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:13:21 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:13:21 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 14:13:21 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 14:13:21 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 14:13:21 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 14:13:21 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 14:13:21 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:13:21 INFO     [itsthe1.api] Schema         : [dots.id].[itsthe1.id]
+2026-08-07 14:13:21 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 14:13:21 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 14:13:21 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:13:22 INFO     [itsthe1.api] Start with Windows: on
+2026-08-07 14:13:22 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 14:13:47 WARNING  [itsthe1.api.monitoring] GET /checkin -> 400 (0 ms) from 127.0.0.1
+2026-08-07 14:13:59 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1871 ms) from 127.0.0.1
+2026-08-07 14:15:02 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1621 ms) from 127.0.0.1
+2026-08-07 14:16:14 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1267 ms) from 127.0.0.1
+2026-08-07 14:18:00 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1726 ms) from 127.0.0.1
+2026-08-07 14:21:19 INFO     [itsthe1.api] Autostart disabled
+2026-08-07 14:21:19 INFO     [itsthe1.api] Saved StartWithWindows = False to D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 14:28:22 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1827 ms) from 127.0.0.1
+2026-08-07 14:28:33 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (80 ms) from 127.0.0.1
+2026-08-07 14:28:34 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1324 ms) from 127.0.0.1
+2026-08-07 14:34:43 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 14:34:43 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 14:34:43 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:34:43 INFO     [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5031
+2026-08-07 14:34:43 INFO     [werkzeug] [33mPress CTRL+C to quit[0m
+2026-08-07 14:34:46 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:34:46] "GET /ping HTTP/1.1" 200 -
+2026-08-07 14:35:26 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1346 ms) from 127.0.0.1
+2026-08-07 14:35:26 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:35:26] "[35m[1mPOST /checkin HTTP/1.1[0m" 201 -
+2026-08-07 14:35:27 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1273 ms) from 127.0.0.1
+2026-08-07 14:35:27 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:35:27] "[35m[1mPOST /checkin HTTP/1.1[0m" 201 -
+2026-08-07 14:35:28 INFO     [itsthe1.api.monitoring] POST /guestattachment -> 201 (233 ms) from 127.0.0.1
+2026-08-07 14:35:28 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:35:28] "[35m[1mPOST /guestattachment HTTP/1.1[0m" 201 -
+2026-08-07 14:36:26 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1329 ms) from 127.0.0.1
+2026-08-07 14:36:26 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:36:26] "[35m[1mPOST /checkin HTTP/1.1[0m" 201 -
+2026-08-07 14:36:26 WARNING  [itsthe1.api.monitoring] PUT /checkin -> 500 (102 ms) from 127.0.0.1
+2026-08-07 14:36:26 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:36:26] "[35m[1mPUT /checkin HTTP/1.1[0m" 500 -
+2026-08-07 14:36:27 INFO     [itsthe1.api.monitoring] POST /guest -> 201 (893 ms) from 127.0.0.1
+2026-08-07 14:36:27 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:36:27] "[35m[1mPOST /guest HTTP/1.1[0m" 201 -
+2026-08-07 14:36:28 ERROR    [app.utilities.image_manipulator] Error in get_relative_attachment_directory_path: could not convert string to float: 'None'
+Traceback (most recent call last):
+  File "D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\app\utilities\image_manipulator.py", line 287, in get_relative_attachment_directory_path
+    id_number = float(guest_id_number)
+ValueError: could not convert string to float: 'None'
+2026-08-07 14:36:28 WARNING  [itsthe1.api.monitoring] PUT /guest -> 500 (1044 ms) from 127.0.0.1
+2026-08-07 14:36:28 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:36:28] "[35m[1mPUT /guest HTTP/1.1[0m" 500 -
+2026-08-07 14:36:29 INFO     [itsthe1.api.monitoring] POST /checkin/AddBackdatedCheckin -> 201 (1015 ms) from 127.0.0.1
+2026-08-07 14:36:29 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:36:29] "[35m[1mPOST /checkin/AddBackdatedCheckin HTTP/1.1[0m" 201 -
+2026-08-07 14:38:14 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 14:38:14 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 14:38:14 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:38:15 INFO     [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5031
+2026-08-07 14:38:15 INFO     [werkzeug] [33mPress CTRL+C to quit[0m
+2026-08-07 14:38:19 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:38:19] "GET /ping HTTP/1.1" 200 -
+2026-08-07 14:38:21 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1429 ms) from 127.0.0.1
+2026-08-07 14:38:21 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:38:21] "[35m[1mPOST /checkin HTTP/1.1[0m" 201 -
+2026-08-07 14:38:22 INFO     [itsthe1.api.monitoring] PUT /checkin -> 201 (1130 ms) from 127.0.0.1
+2026-08-07 14:38:22 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:38:22] "[35m[1mPUT /checkin HTTP/1.1[0m" 201 -
+2026-08-07 14:38:23 INFO     [itsthe1.api.monitoring] POST /guest -> 201 (1018 ms) from 127.0.0.1
+2026-08-07 14:38:23 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:38:23] "[35m[1mPOST /guest HTTP/1.1[0m" 201 -
+2026-08-07 14:38:23 INFO     [itsthe1.api] Quit selected from the tray icon - shutting down
+2026-08-07 14:38:23 INFO     [itsthe1.api] Tray icon closed; process exiting
+2026-08-07 14:38:24 INFO     [itsthe1.api.monitoring] PUT /guest -> 201 (954 ms) from 127.0.0.1
+2026-08-07 14:38:24 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:38:24] "[35m[1mPUT /guest HTTP/1.1[0m" 201 -
+2026-08-07 14:38:25 INFO     [itsthe1.api.monitoring] POST /checkin/AddBackdatedCheckin -> 201 (855 ms) from 127.0.0.1
+2026-08-07 14:38:25 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:38:25] "[35m[1mPOST /checkin/AddBackdatedCheckin HTTP/1.1[0m" 201 -
+2026-08-07 14:39:00 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1188 ms) from 127.0.0.1
+2026-08-07 14:39:00 INFO     [werkzeug] 127.0.0.1 - - [07/Aug/2026 14:39:00] "[35m[1mPOST /checkin HTTP/1.1[0m" 201 -
+2026-08-07 14:40:32 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 14:40:32 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 14:40:32 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:40:32 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:40:32 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 14:40:32 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 14:40:32 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 14:40:32 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 14:40:32 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 14:40:32 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:40:32 INFO     [itsthe1.api] Schema         : [dots.id].[itsthe1.id]
+2026-08-07 14:40:32 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 14:40:32 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 14:40:32 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:40:33 INFO     [itsthe1.api] Start with Windows: off
+2026-08-07 14:40:33 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 14:42:10 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1229 ms) from 127.0.0.1
+2026-08-07 14:43:24 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1058 ms) from 127.0.0.1
+2026-08-07 14:44:29 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (2846 ms) from 127.0.0.1
+2026-08-07 14:47:18 INFO     [itsthe1.api.monitoring] POST /guest -> 201 (1693 ms) from 127.0.0.1
+2026-08-07 14:47:53 INFO     [itsthe1.api] Quit selected from the tray icon - shutting down
+2026-08-07 14:47:53 INFO     [itsthe1.api] Tray icon closed; process exiting
+2026-08-07 14:50:36 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 14:50:36 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 14:50:36 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:50:36 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:50:36 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 14:50:36 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 14:50:36 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 14:50:36 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 14:50:36 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 14:50:36 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 14:50:36 INFO     [itsthe1.api] Schema         : [dots.id].[itsthe1.id]
+2026-08-07 14:50:36 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 14:50:36 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 14:50:36 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 14:50:37 INFO     [itsthe1.api] Start with Windows: off
+2026-08-07 14:50:37 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 14:52:32 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1328 ms) from 127.0.0.1
+2026-08-07 14:53:06 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (3784 ms) from 127.0.0.1
+2026-08-07 14:53:36 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1420 ms) from 127.0.0.1
+2026-08-07 14:54:08 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (5671 ms) from 127.0.0.1
+2026-08-07 14:58:20 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1381 ms) from 127.0.0.1
+2026-08-07 15:00:41 WARNING  [itsthe1.api.monitoring] PUT /checkin -> 400 (15 ms) from 127.0.0.1
+2026-08-07 15:00:55 INFO     [itsthe1.api.monitoring] PUT /checkin -> 201 (1336 ms) from 127.0.0.1
+2026-08-07 15:03:25 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1540 ms) from 127.0.0.1
+2026-08-07 15:11:00 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 15:11:00 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 15:11:00 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 15:11:00 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 15:11:00 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 15:11:00 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 15:11:00 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 15:11:00 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 15:11:00 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 15:11:00 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 15:11:00 INFO     [itsthe1.api] Schema         : [dots.id].[itsthe1.id]
+2026-08-07 15:11:00 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 15:11:00 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 15:11:00 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 15:11:01 INFO     [itsthe1.api] Start with Windows: off
+2026-08-07 15:11:01 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 15:11:15 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1471 ms) from 127.0.0.1
+2026-08-07 15:12:40 INFO     [itsthe1.api.monitoring] PUT /checkin -> 201 (1353 ms) from 127.0.0.1
+2026-08-07 15:12:55 INFO     [itsthe1.api.monitoring] PUT /checkin -> 201 (1382 ms) from 127.0.0.1
+2026-08-07 15:13:20 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1345 ms) from 127.0.0.1
+2026-08-07 15:13:32 INFO     [itsthe1.api.monitoring] PUT /checkin -> 201 (1168 ms) from 127.0.0.1
+2026-08-07 15:18:41 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1335 ms) from 127.0.0.1
+2026-08-07 15:21:13 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (3458 ms) from 127.0.0.1
+2026-08-07 15:21:46 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1419 ms) from 127.0.0.1
+2026-08-07 15:52:47 INFO     [itsthe1.api.monitoring] PUT /checkin -> 201 (1648 ms) from 127.0.0.1
+2026-08-07 15:54:19 ERROR    [itsthe1.api.monitoring] Database health check failed: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Timeout error [258].  (258) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Unable to complete login process due to delay in login response (258)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-07 15:54:19 INFO     [itsthe1.api.monitoring] Database connection recovered
+2026-08-07 15:54:40 INFO     [itsthe1.api] Quit selected from the tray icon - shutting down
+2026-08-07 15:54:40 INFO     [itsthe1.api] Tray icon closed; process exiting
+2026-08-07 16:04:08 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-07 16:04:08 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-07 16:04:08 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 16:04:08 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 16:04:08 INFO     [itsthe1.api] ITSthe1.ID API v1.0.0 starting
+2026-08-07 16:04:08 INFO     [itsthe1.api] Listening on   : http://0.0.0.0:5030
+2026-08-07 16:04:08 INFO     [itsthe1.api] Health check   : http://127.0.0.1:5030/health
+2026-08-07 16:04:08 INFO     [itsthe1.api] Status page    : http://127.0.0.1:5030/status
+2026-08-07 16:04:08 INFO     [itsthe1.api] Config file    : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\config.json
+2026-08-07 16:04:08 INFO     [itsthe1.api] Database       : mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/dots.id?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-07 16:04:08 INFO     [itsthe1.api] Schema         : [dots.id].[itsthe1.id]
+2026-08-07 16:04:08 INFO     [itsthe1.api] Storage path   : C:/ITSthe1/WPF/DOTS_Storage
+2026-08-07 16:04:08 INFO     [itsthe1.api] Log directory  : D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\logs
+2026-08-07 16:04:08 INFO     [itsthe1.api] ==============================================================================
+2026-08-07 16:04:09 INFO     [itsthe1.api] Start with Windows: off
+2026-08-07 16:04:09 INFO     [itsthe1.api] Server thread started; building tray icon
+2026-08-07 16:05:10 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (3421 ms) from 127.0.0.1
+2026-08-07 16:06:49 WARNING  [itsthe1.api.monitoring] PUT /checkin -> 500 (110 ms) from 127.0.0.1
+2026-08-07 16:06:56 WARNING  [itsthe1.api.monitoring] PUT /checkin -> 500 (63 ms) from 127.0.0.1
+2026-08-07 16:07:36 INFO     [itsthe1.api.monitoring] POST /checkin/AddBackdatedCheckin -> 201 (1429 ms) from 127.0.0.1
+2026-08-07 16:08:28 INFO     [itsthe1.api.monitoring] GET /checkintable -> 200 (6 ms) from 127.0.0.1
+2026-08-07 16:09:09 INFO     [itsthe1.api.monitoring] POST /guest -> 201 (1652 ms) from 127.0.0.1
+2026-08-07 16:09:47 ERROR    [app.utilities.image_manipulator] Error in get_relative_attachment_directory_path: could not convert string to float: 'None'
+Traceback (most recent call last):
+  File "D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\app\utilities\image_manipulator.py", line 287, in get_relative_attachment_directory_path
+    id_number = float(guest_id_number)
+ValueError: could not convert string to float: 'None'
+2026-08-07 16:09:47 WARNING  [itsthe1.api.monitoring] PUT /guest -> 500 (1235 ms) from 127.0.0.1
+2026-08-07 16:10:43 WARNING  [itsthe1.api.monitoring] PUT /guest -> 400 (9 ms) from 127.0.0.1
+2026-08-07 16:12:06 WARNING  [itsthe1.api.monitoring] PUT /guest -> 400 (9 ms) from 127.0.0.1
+2026-08-07 16:12:19 ERROR    [app.utilities.image_manipulator] Error in get_relative_attachment_directory_path: could not convert string to float: 'None'
+Traceback (most recent call last):
+  File "D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\app\utilities\image_manipulator.py", line 287, in get_relative_attachment_directory_path
+    id_number = float(guest_id_number)
+ValueError: could not convert string to float: 'None'
+2026-08-07 16:12:19 WARNING  [itsthe1.api.monitoring] PUT /guest -> 500 (1285 ms) from 127.0.0.1
+2026-08-07 16:12:26 WARNING  [itsthe1.api.monitoring] POST /guest -> 400 (51 ms) from 127.0.0.1
+2026-08-07 16:13:45 WARNING  [itsthe1.api.monitoring] POST /guest -> 400 (4 ms) from 127.0.0.1
+2026-08-07 16:14:19 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1337 ms) from 127.0.0.1
+2026-08-07 16:15:03 INFO     [itsthe1.api.monitoring] POST /guest -> 201 (1505 ms) from 127.0.0.1
+2026-08-07 16:15:33 ERROR    [app.utilities.image_manipulator] Error in get_relative_attachment_directory_path: could not convert string to float: 'None'
+Traceback (most recent call last):
+  File "D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\app\utilities\image_manipulator.py", line 287, in get_relative_attachment_directory_path
+    id_number = float(guest_id_number)
+ValueError: could not convert string to float: 'None'
+2026-08-07 16:15:33 WARNING  [itsthe1.api.monitoring] PUT /guest -> 500 (1388 ms) from 127.0.0.1
+2026-08-07 16:16:34 ERROR    [app.utilities.image_manipulator] Error in get_relative_attachment_directory_path: could not convert string to float: 'None'
+Traceback (most recent call last):
+  File "D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\app\utilities\image_manipulator.py", line 287, in get_relative_attachment_directory_path
+    id_number = float(guest_id_number)
+ValueError: could not convert string to float: 'None'
+2026-08-07 16:16:34 WARNING  [itsthe1.api.monitoring] PUT /guest -> 500 (1427 ms) from 127.0.0.1
+2026-08-07 16:17:55 INFO     [itsthe1.api.monitoring] POST /guestcheckout -> 201 (65 ms) from 127.0.0.1
+2026-08-07 16:18:06 WARNING  [itsthe1.api.monitoring] POST /guestcheckout -> 400 (37 ms) from 127.0.0.1
+2026-08-07 16:18:27 ERROR    [itsthe1.api.monitoring] Unhandled exception on POST /guestcheckout: 'NoneType' object has no attribute 'CheckinDate'
+Traceback (most recent call last):
+  File "C:\Users\PasinduITSthe1\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\PasinduITSthe1\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\app\guestcheckout\routes.py", line 124, in update_guestcheckout
+    if checkout_date_time < current_checkin_guest_id.CheckinDate:
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'CheckinDate'
+
+2026-08-07 16:18:27 WARNING  [itsthe1.api.monitoring] POST /guestcheckout -> 500 (24 ms) from 127.0.0.1
+2026-08-07 16:18:57 INFO     [itsthe1.api.monitoring] POST /checkincancellation -> 201 (116 ms) from 127.0.0.1
+2026-08-07 16:19:28 INFO     [itsthe1.api.monitoring] POST /checkincancellation -> 201 (31 ms) from 127.0.0.1
+2026-08-07 16:19:52 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (7 ms) from 127.0.0.1
+2026-08-07 16:20:55 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (27 ms) from 127.0.0.1
+2026-08-07 16:22:58 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1678 ms) from 127.0.0.1
+2026-08-07 16:24:22 WARNING  [itsthe1.api.monitoring] POST /checkincancellation -> 400 (6 ms) from 127.0.0.1
+2026-08-07 16:24:53 WARNING  [itsthe1.api.monitoring] POST /checkincancellation -> 400 (20 ms) from 127.0.0.1
+2026-08-07 16:25:09 INFO     [itsthe1.api.monitoring] POST /checkincancellation -> 201 (117 ms) from 127.0.0.1
+2026-08-07 16:26:23 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (20 ms) from 127.0.0.1
+2026-08-07 16:26:30 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (10 ms) from 127.0.0.1
+2026-08-07 16:26:44 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1277 ms) from 127.0.0.1
+2026-08-07 16:27:17 INFO     [itsthe1.api.monitoring] POST /checkincancellation -> 201 (64 ms) from 127.0.0.1
+2026-08-07 16:27:37 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (3326 ms) from 127.0.0.1
+2026-08-07 16:29:05 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (3726 ms) from 127.0.0.1
+2026-08-07 16:29:31 INFO     [itsthe1.api.monitoring] POST /roomchange -> 201 (66 ms) from 127.0.0.1
+2026-08-19 11:18:42 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-19 11:18:42 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-19 11:18:42 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-19 11:18:42 INFO     [waitress] Serving on http://127.0.0.1:5031
+2026-08-19 11:20:54 WARNING  [app.utilities.attachment_store] guestdocumentimages is not usable ((pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid object name 'president_hotel.itsthe1.id.guestdocumentimages'. (208) (SQLExecDirectW); [42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+[SQL: SELECT president_hotel.[itsthe1.id].guestdocumentimages.[DocumentId] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_DocumentId], president_hotel.[itsthe1.id].guestdocumentimages.[GuestId] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_GuestId], president_hotel.[itsthe1.id].guestdocumentimages.[DocumentUID] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_DocumentUID], president_hotel.[itsthe1.id].guestdocumentimages.[AttachmentCode] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_AttachmentCode], president_hotel.[itsthe1.id].guestdocumentimages.[FileName] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_FileName], president_hotel.[itsthe1.id].guestdocumentimages.[FileSizeKB] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_FileSizeKB], president_hotel.[itsthe1.id].guestdocumentimages.[ImageData] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_ImageData], president_hotel.[itsthe1.id].guestdocumentimages.[UploadedAt] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_UploadedAt] 
+FROM president_hotel.[itsthe1.id].guestdocumentimages 
+WHERE president_hotel.[itsthe1.id].guestdocumentimages.[GuestId] = ? AND president_hotel.[itsthe1.id].guestdocumentimages.[FileName] = ?]
+[parameters: (73747, 'LC08191120_M.jpg')]
+(Background on this error at: https://sqlalche.me/e/20/f405)). Document images will be stored under BaseDirectoryPath only. Set DocumentImageStorage to "database" once the table exists, or to "filesystem" to silence this.
+2026-08-19 11:20:56 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (4646 ms) from 127.0.0.1
+2026-08-19 11:20:56 INFO     [itsthe1.api.monitoring] GET /checkin -> 200 (3 ms) from 127.0.0.1
+2026-08-19 11:20:56 INFO     [itsthe1.api.monitoring] GET /guest -> 200 (11 ms) from 127.0.0.1
+2026-08-19 11:20:57 INFO     [itsthe1.api.monitoring] POST /guest -> 201 (909 ms) from 127.0.0.1
+2026-08-19 11:20:58 ERROR    [app.utilities.image_manipulator] Error in get_relative_attachment_directory_path: could not convert string to float: 'None'
+Traceback (most recent call last):
+  File "D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\app\utilities\image_manipulator.py", line 287, in get_relative_attachment_directory_path
+    id_number = float(guest_id_number)
+ValueError: could not convert string to float: 'None'
+2026-08-19 11:20:58 ERROR    [app.utilities.image_manipulator] Error in get_relative_attachment_directory_path: could not convert string to float: 'None'
+Traceback (most recent call last):
+  File "D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\app\utilities\image_manipulator.py", line 287, in get_relative_attachment_directory_path
+    id_number = float(guest_id_number)
+ValueError: could not convert string to float: 'None'
+2026-08-19 11:20:58 WARNING  [itsthe1.api.monitoring] PUT /guest -> 500 (835 ms) from 127.0.0.1
+2026-08-19 11:20:58 INFO     [itsthe1.api.monitoring] POST /guestattachment -> 201 (75 ms) from 127.0.0.1
+2026-08-19 11:20:58 INFO     [itsthe1.api.monitoring] POST /roomchange -> 201 (161 ms) from 127.0.0.1
+2026-08-19 11:20:58 INFO     [itsthe1.api.monitoring] POST /guestcheckout -> 201 (102 ms) from 127.0.0.1
+2026-08-19 11:20:59 INFO     [itsthe1.api.monitoring] POST /guestcheckout -> 201 (365 ms) from 127.0.0.1
+2026-08-19 11:20:59 INFO     [itsthe1.api.monitoring] POST /checkout -> 201 (143 ms) from 127.0.0.1
+2026-08-19 11:20:59 INFO     [itsthe1.api.monitoring] PUT /checkout -> 201 (13 ms) from 127.0.0.1
+2026-08-19 11:21:00 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1090 ms) from 127.0.0.1
+2026-08-19 11:21:00 INFO     [itsthe1.api.monitoring] POST /checkincancellation -> 201 (16 ms) from 127.0.0.1
+2026-08-19 11:21:01 INFO     [itsthe1.api.monitoring] POST /checkin/AddBackdatedCheckin -> 201 (1278 ms) from 127.0.0.1
+2026-08-19 11:21:02 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (109 ms) from 127.0.0.1
+2026-08-19 11:21:54 WARNING  [itsthe1.api.monitoring] PUT /guest -> 400 (8 ms) from 127.0.0.1
+2026-08-19 11:22:41 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1020 ms) from 127.0.0.1
+2026-08-19 11:22:42 INFO     [itsthe1.api.monitoring] POST /guest -> 201 (768 ms) from 127.0.0.1
+2026-08-19 11:22:43 ERROR    [app.utilities.image_manipulator] Error in get_relative_attachment_directory_path: could not convert string to float: 'None'
+Traceback (most recent call last):
+  File "D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\app\utilities\image_manipulator.py", line 287, in get_relative_attachment_directory_path
+    id_number = float(guest_id_number)
+ValueError: could not convert string to float: 'None'
+2026-08-19 11:22:43 ERROR    [app.utilities.image_manipulator] Error in get_relative_attachment_directory_path: could not convert string to float: 'None'
+Traceback (most recent call last):
+  File "D:\GitHub Projects\1.ID API\my_flask_app_4_new_database\app\utilities\image_manipulator.py", line 287, in get_relative_attachment_directory_path
+    id_number = float(guest_id_number)
+ValueError: could not convert string to float: 'None'
+2026-08-19 11:22:43 WARNING  [itsthe1.api.monitoring] PUT /guest -> 500 (758 ms) from 127.0.0.1
+2026-08-19 11:22:43 INFO     [itsthe1.api.monitoring] POST /checkout -> 201 (69 ms) from 127.0.0.1
+2026-08-19 11:25:10 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-19 11:25:10 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-19 11:25:10 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-19 11:25:10 INFO     [waitress] Serving on http://127.0.0.1:5031
+2026-08-19 11:25:21 WARNING  [app.utilities.attachment_store] guestdocumentimages is not usable ((pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid object name 'president_hotel.itsthe1.id.guestdocumentimages'. (208) (SQLExecDirectW); [42S02] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+[SQL: SELECT president_hotel.[itsthe1.id].guestdocumentimages.[DocumentId] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_DocumentId], president_hotel.[itsthe1.id].guestdocumentimages.[GuestId] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_GuestId], president_hotel.[itsthe1.id].guestdocumentimages.[DocumentUID] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_DocumentUID], president_hotel.[itsthe1.id].guestdocumentimages.[AttachmentCode] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_AttachmentCode], president_hotel.[itsthe1.id].guestdocumentimages.[FileName] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_FileName], president_hotel.[itsthe1.id].guestdocumentimages.[FileSizeKB] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_FileSizeKB], president_hotel.[itsthe1.id].guestdocumentimages.[ImageData] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_ImageData], president_hotel.[itsthe1.id].guestdocumentimages.[UploadedAt] AS [[president_hotel]]_[itsthe1_id]]_guestdocumentimages_UploadedAt] 
+FROM president_hotel.[itsthe1.id].guestdocumentimages 
+WHERE president_hotel.[itsthe1.id].guestdocumentimages.[GuestId] = ? AND president_hotel.[itsthe1.id].guestdocumentimages.[FileName] = ?]
+[parameters: (73755, 'PG112520_M.jpg')]
+(Background on this error at: https://sqlalche.me/e/20/f405)). Document images will be stored under BaseDirectoryPath only. Set DocumentImageStorage to "database" once the table exists, or to "filesystem" to silence this.
+2026-08-19 11:25:21 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1491 ms) from 127.0.0.1
+2026-08-19 11:25:22 INFO     [itsthe1.api.monitoring] POST /guest -> 201 (862 ms) from 127.0.0.1
+2026-08-19 11:25:23 INFO     [itsthe1.api.monitoring] PUT /guest -> 201 (858 ms) from 127.0.0.1
+2026-08-19 11:25:23 INFO     [itsthe1.api.monitoring] POST /checkout -> 201 (91 ms) from 127.0.0.1
+2026-08-19 11:25:42 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (3042 ms) from 127.0.0.1
+2026-08-19 11:25:42 INFO     [itsthe1.api.monitoring] GET /checkin -> 200 (2 ms) from 127.0.0.1
+2026-08-19 11:25:42 INFO     [itsthe1.api.monitoring] GET /guest -> 200 (16 ms) from 127.0.0.1
+2026-08-19 11:25:43 INFO     [itsthe1.api.monitoring] POST /guest -> 201 (769 ms) from 127.0.0.1
+2026-08-19 11:25:43 INFO     [itsthe1.api.monitoring] PUT /guest -> 201 (838 ms) from 127.0.0.1
+2026-08-19 11:25:44 INFO     [itsthe1.api.monitoring] POST /guestattachment -> 201 (89 ms) from 127.0.0.1
+2026-08-19 11:25:44 INFO     [itsthe1.api.monitoring] POST /roomchange -> 201 (130 ms) from 127.0.0.1
+2026-08-19 11:25:44 INFO     [itsthe1.api.monitoring] POST /guestcheckout -> 201 (49 ms) from 127.0.0.1
+2026-08-19 11:25:44 INFO     [itsthe1.api.monitoring] POST /guestcheckout -> 201 (86 ms) from 127.0.0.1
+2026-08-19 11:25:44 INFO     [itsthe1.api.monitoring] POST /checkout -> 201 (51 ms) from 127.0.0.1
+2026-08-19 11:25:44 INFO     [itsthe1.api.monitoring] PUT /checkout -> 201 (37 ms) from 127.0.0.1
+2026-08-19 11:25:45 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (827 ms) from 127.0.0.1
+2026-08-19 11:25:45 INFO     [itsthe1.api.monitoring] POST /checkincancellation -> 201 (36 ms) from 127.0.0.1
+2026-08-19 11:25:46 INFO     [itsthe1.api.monitoring] POST /checkin/AddBackdatedCheckin -> 201 (1035 ms) from 127.0.0.1
+2026-08-19 11:25:47 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (920 ms) from 127.0.0.1
+2026-08-19 11:25:47 INFO     [itsthe1.api.monitoring] POST /checkout -> 201 (25 ms) from 127.0.0.1
+2026-08-19 11:26:40 INFO     [itsthe1.api.monitoring] GET /guestdocumentimage -> 200 (4 ms) from 127.0.0.1
+2026-08-19 11:26:42 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (2629 ms) from 127.0.0.1
+2026-08-19 11:26:42 INFO     [itsthe1.api.monitoring] GET /guest -> 200 (23 ms) from 127.0.0.1
+2026-08-19 11:26:42 WARNING  [itsthe1.api.monitoring] POST /guestcheckout -> 400 (20 ms) from 127.0.0.1
+2026-08-19 11:26:43 INFO     [itsthe1.api.monitoring] POST /guestcheckout -> 201 (137 ms) from 127.0.0.1
+2026-08-19 11:26:43 INFO     [itsthe1.api.monitoring] POST /guestcheckout -> 201 (57 ms) from 127.0.0.1
+2026-08-19 11:26:43 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (72 ms) from 127.0.0.1
+2026-08-19 11:26:43 WARNING  [itsthe1.api.monitoring] POST /guest -> 400 (3 ms) from 127.0.0.1
+2026-08-19 11:26:43 INFO     [itsthe1.api.monitoring] POST /checkout -> 201 (80 ms) from 127.0.0.1
+2026-08-19 11:26:43 WARNING  [itsthe1.api.monitoring] POST /checkout -> 400 (9 ms) from 127.0.0.1
+2026-08-19 11:27:10 INFO     [itsthe1.api.monitoring] GET /room -> 200 (5 ms) from 127.0.0.1
+2026-08-19 11:27:11 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1255 ms) from 127.0.0.1
+2026-08-19 11:27:11 WARNING  [itsthe1.api.monitoring] POST /guest -> 400 (14 ms) from 127.0.0.1
+2026-08-19 11:27:12 INFO     [itsthe1.api.monitoring] POST /guest -> 201 (1164 ms) from 127.0.0.1
+2026-08-19 11:27:12 INFO     [itsthe1.api.monitoring] POST /checkout -> 201 (71 ms) from 127.0.0.1
+2026-08-19 11:36:22 WARNING  [itsthe1.api.monitoring] POST /checkin -> 500 (1457 ms) from 127.0.0.1
+2026-08-19 11:37:21 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1170 ms) from 127.0.0.1
+2026-08-19 11:37:21 INFO     [itsthe1.api.monitoring] GET /guest -> 200 (7 ms) from 127.0.0.1
+2026-08-19 11:37:21 INFO     [itsthe1.api.monitoring] GET /checkin -> 200 (1 ms) from 127.0.0.1
+2026-08-19 11:37:21 INFO     [itsthe1.api.monitoring] POST /checkout -> 201 (34 ms) from 127.0.0.1
+2026-08-19 11:37:44 INFO     [itsthe1.api.monitoring] GET /guest -> 200 (26 ms) from 127.0.0.1
+2026-08-19 11:43:25 INFO     [itsthe1.api.monitoring] GET /room -> 200 (3 ms) from 127.0.0.1
+2026-08-19 11:43:41 INFO     [itsthe1.api.monitoring] GET /room -> 200 (2 ms) from 127.0.0.1
+2026-08-19 11:43:42 INFO     [itsthe1.api.monitoring] GET /checkintable -> 200 (682 ms) from 127.0.0.1
+2026-08-19 11:43:43 INFO     [itsthe1.api.monitoring] GET /checkout -> 200 (530 ms) from 127.0.0.1
+2026-08-19 11:44:09 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (3188 ms) from 127.0.0.1
+2026-08-19 11:44:09 INFO     [itsthe1.api.monitoring] GET /checkin -> 200 (2 ms) from 127.0.0.1
+2026-08-19 11:44:09 INFO     [itsthe1.api.monitoring] GET /guest -> 200 (9 ms) from 127.0.0.1
+2026-08-19 11:44:10 INFO     [itsthe1.api.monitoring] POST /guest -> 201 (914 ms) from 127.0.0.1
+2026-08-19 11:44:11 INFO     [itsthe1.api.monitoring] PUT /guest -> 201 (823 ms) from 127.0.0.1
+2026-08-19 11:44:11 INFO     [itsthe1.api.monitoring] POST /guestattachment -> 201 (39 ms) from 127.0.0.1
+2026-08-19 11:44:11 INFO     [itsthe1.api.monitoring] POST /roomchange -> 201 (74 ms) from 127.0.0.1
+2026-08-19 11:44:11 INFO     [itsthe1.api.monitoring] GET /checkin -> 200 (1 ms) from 127.0.0.1
+2026-08-19 11:44:11 INFO     [itsthe1.api.monitoring] POST /guestcheckout -> 201 (56 ms) from 127.0.0.1
+2026-08-19 11:44:11 WARNING  [itsthe1.api.monitoring] POST /guestcheckout -> 400 (28 ms) from 127.0.0.1
+2026-08-19 11:44:11 INFO     [itsthe1.api.monitoring] POST /guestcheckout -> 201 (37 ms) from 127.0.0.1
+2026-08-19 11:44:11 INFO     [itsthe1.api.monitoring] GET /guest -> 200 (8 ms) from 127.0.0.1
+2026-08-19 11:44:11 INFO     [itsthe1.api.monitoring] POST /checkout -> 201 (22 ms) from 127.0.0.1
+2026-08-19 11:44:11 INFO     [itsthe1.api.monitoring] GET /checkin -> 200 (1 ms) from 127.0.0.1
+2026-08-19 11:44:12 INFO     [itsthe1.api.monitoring] PUT /checkout -> 201 (86 ms) from 127.0.0.1
+2026-08-19 11:44:12 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (775 ms) from 127.0.0.1
+2026-08-19 11:44:12 INFO     [itsthe1.api.monitoring] POST /checkincancellation -> 201 (16 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] POST /checkin/AddBackdatedCheckin -> 201 (1815 ms) from 127.0.0.1
+2026-08-19 11:44:14 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (4 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /country -> 200 (7 ms) from 127.0.0.1
+2026-08-19 11:44:14 WARNING  [waitress.queue] Task queue depth is 1
+2026-08-19 11:44:14 WARNING  [waitress.queue] Task queue depth is 2
+2026-08-19 11:44:14 WARNING  [waitress.queue] Task queue depth is 3
+2026-08-19 11:44:14 WARNING  [waitress.queue] Task queue depth is 3
+2026-08-19 11:44:14 WARNING  [waitress.queue] Task queue depth is 4
+2026-08-19 11:44:14 WARNING  [waitress.queue] Task queue depth is 5
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /relationship -> 200 (9 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /paymenttype -> 200 (12 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /documenttype -> 200 (15 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /emirate -> 200 (18 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /checkintype -> 200 (8 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /checkouttype -> 200 (10 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /escorttype -> 200 (7 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /cancellationreason -> 200 (6 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /accessibilitytype -> 200 (7 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /cardtype -> 200 (19 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /visitpurpose -> 200 (27 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /dtcmaction -> 200 (9 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /room -> 200 (31 ms) from 127.0.0.1
+2026-08-19 11:44:14 INFO     [itsthe1.api.monitoring] GET /guestdocumentimage -> 200 (3 ms) from 127.0.0.1
+2026-08-19 11:44:43 INFO     [itsthe1.api.monitoring] GET /room -> 200 (3 ms) from 127.0.0.1
+2026-08-19 11:44:43 INFO     [itsthe1.api.monitoring] GET /checkintable -> 200 (610 ms) from 127.0.0.1
+2026-08-19 11:44:44 INFO     [itsthe1.api.monitoring] GET /checkout -> 200 (835 ms) from 127.0.0.1
+2026-08-19 11:45:01 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (3385 ms) from 127.0.0.1
+2026-08-19 11:45:01 INFO     [itsthe1.api.monitoring] GET /checkin -> 200 (2 ms) from 127.0.0.1
+2026-08-19 11:45:01 INFO     [itsthe1.api.monitoring] GET /guest -> 200 (16 ms) from 127.0.0.1
+2026-08-19 11:45:02 INFO     [itsthe1.api.monitoring] POST /guest -> 201 (878 ms) from 127.0.0.1
+2026-08-19 11:45:03 INFO     [itsthe1.api.monitoring] PUT /guest -> 201 (773 ms) from 127.0.0.1
+2026-08-19 11:45:03 INFO     [itsthe1.api.monitoring] POST /guestattachment -> 201 (73 ms) from 127.0.0.1
+2026-08-19 11:45:03 INFO     [itsthe1.api.monitoring] POST /roomchange -> 201 (115 ms) from 127.0.0.1
+2026-08-19 11:45:03 INFO     [itsthe1.api.monitoring] GET /checkin -> 200 (11 ms) from 127.0.0.1
+2026-08-19 11:45:03 INFO     [itsthe1.api.monitoring] POST /guestcheckout -> 201 (123 ms) from 127.0.0.1
+2026-08-19 11:45:03 WARNING  [itsthe1.api.monitoring] POST /guestcheckout -> 400 (37 ms) from 127.0.0.1
+2026-08-19 11:45:03 INFO     [itsthe1.api.monitoring] POST /guestcheckout -> 201 (117 ms) from 127.0.0.1
+2026-08-19 11:45:03 INFO     [itsthe1.api.monitoring] GET /guest -> 200 (38 ms) from 127.0.0.1
+2026-08-19 11:45:03 INFO     [itsthe1.api.monitoring] POST /checkout -> 201 (56 ms) from 127.0.0.1
+2026-08-19 11:45:03 INFO     [itsthe1.api.monitoring] GET /checkin -> 200 (2 ms) from 127.0.0.1
+2026-08-19 11:45:03 INFO     [itsthe1.api.monitoring] PUT /checkout -> 201 (17 ms) from 127.0.0.1
+2026-08-19 11:45:04 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (837 ms) from 127.0.0.1
+2026-08-19 11:45:04 INFO     [itsthe1.api.monitoring] POST /checkincancellation -> 201 (63 ms) from 127.0.0.1
+2026-08-19 11:45:05 INFO     [itsthe1.api.monitoring] POST /checkin/AddBackdatedCheckin -> 201 (1076 ms) from 127.0.0.1
+2026-08-19 11:45:05 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (18 ms) from 127.0.0.1
+2026-08-19 11:45:05 INFO     [itsthe1.api.monitoring] GET /country -> 200 (6 ms) from 127.0.0.1
+2026-08-19 11:45:05 WARNING  [waitress.queue] Task queue depth is 1
+2026-08-19 11:45:05 WARNING  [waitress.queue] Task queue depth is 2
+2026-08-19 11:45:05 WARNING  [waitress.queue] Task queue depth is 3
+2026-08-19 11:45:05 WARNING  [waitress.queue] Task queue depth is 4
+2026-08-19 11:45:05 WARNING  [waitress.queue] Task queue depth is 5
+2026-08-19 11:45:05 WARNING  [waitress.queue] Task queue depth is 6
+2026-08-19 11:45:05 INFO     [itsthe1.api.monitoring] GET /checkintype -> 200 (1 ms) from 127.0.0.1
+2026-08-19 11:45:05 INFO     [itsthe1.api.monitoring] GET /emirate -> 200 (9 ms) from 127.0.0.1
+2026-08-19 11:45:05 INFO     [itsthe1.api.monitoring] GET /checkouttype -> 200 (2 ms) from 127.0.0.1
+2026-08-19 11:45:05 INFO     [itsthe1.api.monitoring] GET /paymenttype -> 200 (9 ms) from 127.0.0.1
+2026-08-19 11:45:05 INFO     [itsthe1.api.monitoring] GET /documenttype -> 200 (14 ms) from 127.0.0.1
+2026-08-19 11:45:06 INFO     [itsthe1.api.monitoring] GET /escorttype -> 200 (3 ms) from 127.0.0.1
+2026-08-19 11:45:06 INFO     [itsthe1.api.monitoring] GET /relationship -> 200 (14 ms) from 127.0.0.1
+2026-08-19 11:45:06 INFO     [itsthe1.api.monitoring] GET /accessibilitytype -> 200 (4 ms) from 127.0.0.1
+2026-08-19 11:45:06 INFO     [itsthe1.api.monitoring] GET /visitpurpose -> 200 (16 ms) from 127.0.0.1
+2026-08-19 11:45:06 INFO     [itsthe1.api.monitoring] GET /cancellationreason -> 200 (6 ms) from 127.0.0.1
+2026-08-19 11:45:06 INFO     [itsthe1.api.monitoring] GET /dtcmaction -> 200 (5 ms) from 127.0.0.1
+2026-08-19 11:45:06 INFO     [itsthe1.api.monitoring] GET /room -> 200 (21 ms) from 127.0.0.1
+2026-08-19 11:45:06 INFO     [itsthe1.api.monitoring] GET /cardtype -> 200 (20 ms) from 127.0.0.1
+2026-08-19 11:45:06 INFO     [itsthe1.api.monitoring] GET /guestdocumentimage -> 200 (1 ms) from 127.0.0.1
+2026-08-19 11:45:23 INFO     [itsthe1.api.monitoring] GET /checkintable -> 200 (844 ms) from 127.0.0.1
+2026-08-19 11:45:24 INFO     [itsthe1.api.monitoring] GET /checkinguest -> 200 (1127 ms) from 127.0.0.1
+2026-08-19 11:45:24 INFO     [itsthe1.api.monitoring] GET /room -> 200 (7 ms) from 127.0.0.1
+2026-08-19 11:45:44 WARNING  [itsthe1.api.monitoring] POST /checkout -> 500 (243 ms) from 127.0.0.1
+2026-08-19 11:45:45 WARNING  [itsthe1.api.monitoring] POST /checkout -> 500 (97 ms) from 127.0.0.1
+2026-08-19 11:46:47 WARNING  [itsthe1.api.monitoring] POST /checkin -> 400 (80 ms) from 127.0.0.1
+2026-08-19 11:46:48 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1114 ms) from 127.0.0.1
+2026-08-19 11:46:48 INFO     [itsthe1.api.monitoring] POST /checkout -> 201 (83 ms) from 127.0.0.1
+2026-08-19 11:47:20 INFO     [itsthe1.api.monitoring] POST /checkin -> 201 (1073 ms) from 127.0.0.1
+2026-08-19 11:47:20 INFO     [itsthe1.api.monitoring] POST /checkout -> 201 (19 ms) from 127.0.0.1
+2026-08-21 13:32:04 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-21 13:32:05 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-21 13:32:05 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-21 13:32:05 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-24 12:01:23 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-24 12:01:24 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-24 12:01:24 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-24 12:01:24 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-24 12:01:51 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-24 12:01:52 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-24 12:01:52 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-24 12:01:52 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-24 13:25:37 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-24 13:25:38 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-24 13:25:38 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-24 13:25:38 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-24 13:26:54 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-24 13:26:54 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-24 13:26:54 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-24 13:26:54 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-24 13:27:33 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-24 13:27:33 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-24 13:27:33 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-24 13:27:33 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-24 13:27:46 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-24 13:27:47 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-24 13:27:47 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-24 13:27:47 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:01:10 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:01:11 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:01:11 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-31 13:01:11 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:02:48 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:02:49 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:02:49 INFO     [itsthe1.api] Application created with 50 routes
+2026-08-31 13:02:49 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:07:48 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:07:49 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:07:49 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:07:49 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:07:49 INFO     [itsthe1.api.monitoring] GET /room -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:07:50 INFO     [itsthe1.api.monitoring] GET /checkout -> 200 (391 ms) from 127.0.0.1
+2026-08-31 13:07:51 INFO     [itsthe1.api.monitoring] GET /payment -> 200 (636 ms) from 127.0.0.1
+2026-08-31 13:08:01 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:08:02 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:08:02 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:08:02 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:08:02 INFO     [itsthe1.api.monitoring] GET /room -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:08:29 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:08:30 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:08:30 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:08:30 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:08:30 INFO     [itsthe1.api.monitoring] GET /room -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:08:31 INFO     [itsthe1.api.monitoring] GET /checkout -> 200 (353 ms) from 127.0.0.1
+2026-08-31 13:08:33 INFO     [itsthe1.api.monitoring] GET /payment -> 200 (632 ms) from 127.0.0.1
+2026-08-31 13:08:33 INFO     [itsthe1.api.monitoring] GET /roomchange -> 200 (73 ms) from 127.0.0.1
+2026-08-31 13:08:33 INFO     [itsthe1.api.monitoring] GET /mainguestchange -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:08:35 INFO     [itsthe1.api.monitoring] GET /checkintable -> 200 (769 ms) from 127.0.0.1
+2026-08-31 13:08:38 INFO     [itsthe1.api.monitoring] GET /checkinguest -> 200 (1250 ms) from 127.0.0.1
+2026-08-31 13:08:41 INFO     [itsthe1.api.monitoring] GET /guestattachment -> 200 (749 ms) from 127.0.0.1
+2026-08-31 13:08:52 INFO     [itsthe1.api.monitoring] GET /log -> 200 (2586 ms) from 127.0.0.1
+2026-08-31 13:08:55 INFO     [itsthe1.api.monitoring] GET /guesttable -> 200 (1361 ms) from 127.0.0.1
+2026-08-31 13:09:08 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:09:09 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:09:09 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:09:09 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:09:11 INFO     [itsthe1.api.monitoring] GET /guesttable -> 200 (961 ms) from 127.0.0.1
+2026-08-31 13:09:32 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:09:33 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:09:33 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:09:33 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:09:35 INFO     [itsthe1.api.monitoring] GET /guesttable -> 200 (1272 ms) from 127.0.0.1
+2026-08-31 13:09:41 INFO     [itsthe1.api.monitoring] GET /guestversion -> 200 (4831 ms) from 127.0.0.1
+2026-08-31 13:09:55 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:09:56 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:09:56 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:09:56 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:09:56 INFO     [itsthe1.api.monitoring] GET /changes -> 200 (177 ms) from 127.0.0.1
+2026-08-31 13:09:56 INFO     [itsthe1.api.monitoring] GET /changes?since=ci69346.co67236.cg90807.rc30228.mg2031.gu73793.lg131512.rm-103614 -> 200 (1 ms) from 127.0.0.1
+2026-08-31 13:09:56 INFO     [itsthe1.api.monitoring] GET /changes?since=garbage -> 200 (1 ms) from 127.0.0.1
+2026-08-31 13:09:58 INFO     [itsthe1.api.monitoring] GET /log -> 200 (1752 ms) from 127.0.0.1
+2026-08-31 13:09:59 INFO     [itsthe1.api.monitoring] GET /log?since_id=99700 -> 200 (654 ms) from 127.0.0.1
+2026-08-31 13:09:59 INFO     [itsthe1.api.monitoring] GET /log?limit=5 -> 200 (8 ms) from 127.0.0.1
+2026-08-31 13:09:59 INFO     [itsthe1.api.monitoring] GET /log?order=desc&limit=1 -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:10:00 INFO     [itsthe1.api.monitoring] GET /checkout?since_id=36079 -> 200 (352 ms) from 127.0.0.1
+2026-08-31 13:10:00 INFO     [itsthe1.api.monitoring] GET /checkinguest?checkin_id=69345 -> 200 (7 ms) from 127.0.0.1
+2026-08-31 13:10:00 INFO     [itsthe1.api.monitoring] GET /checkintable?active=1 -> 200 (22 ms) from 127.0.0.1
+2026-08-31 13:10:00 INFO     [itsthe1.api.monitoring] GET /room?occupied=1 -> 200 (4 ms) from 127.0.0.1
+2026-08-31 13:10:00 INFO     [itsthe1.api.monitoring] GET /room -> 200 (3 ms) from 127.0.0.1
+2026-08-31 13:10:00 WARNING  [itsthe1.api.monitoring] GET /log?since_id=abc -> 400 (0 ms) from 127.0.0.1
+2026-08-31 13:10:00 WARNING  [itsthe1.api.monitoring] GET /log?limit=0 -> 400 (0 ms) from 127.0.0.1
+2026-08-31 13:10:00 WARNING  [itsthe1.api.monitoring] GET /log?order=sideways -> 400 (0 ms) from 127.0.0.1
+2026-08-31 13:10:00 WARNING  [itsthe1.api.monitoring] GET /checkinguest?since=2026-01-01 -> 400 (0 ms) from 127.0.0.1
+2026-08-31 13:10:00 WARNING  [itsthe1.api.monitoring] GET /checkintable?active=maybe -> 400 (0 ms) from 127.0.0.1
+2026-08-31 13:10:14 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:10:15 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:10:15 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:10:15 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:10:15 INFO     [itsthe1.api.monitoring] GET /room -> 200 (95 ms) from 127.0.0.1
+2026-08-31 13:10:15 INFO     [itsthe1.api.monitoring] GET /room -> 200 (1 ms) from 127.0.0.1
+2026-08-31 13:10:15 INFO     [itsthe1.api.monitoring] GET /checkintable?active=1 -> 200 (11 ms) from 127.0.0.1
+2026-08-31 13:10:15 INFO     [itsthe1.api.monitoring] GET /checkintable?active=1 -> 200 (4 ms) from 127.0.0.1
+2026-08-31 13:10:15 INFO     [itsthe1.api.monitoring] GET /log?limit=200 -> 200 (21 ms) from 127.0.0.1
+2026-08-31 13:10:15 INFO     [itsthe1.api.monitoring] GET /log?limit=200 -> 200 (4 ms) from 127.0.0.1
+2026-08-31 13:10:17 INFO     [itsthe1.api.monitoring] GET /log -> 200 (1401 ms) from 127.0.0.1
+2026-08-31 13:10:19 INFO     [itsthe1.api.monitoring] GET /log -> 200 (2541 ms) from 127.0.0.1
+2026-08-31 13:10:20 INFO     [itsthe1.api.monitoring] GET /log?limit=5000 -> 200 (141 ms) from 127.0.0.1
+2026-08-31 13:10:20 INFO     [itsthe1.api.monitoring] GET /log?limit=5000 -> 304 (118 ms) from 127.0.0.1
+2026-08-31 13:10:20 INFO     [itsthe1.api.monitoring] GET /checkouttype -> 200 (22 ms) from 127.0.0.1
+2026-08-31 13:10:44 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:10:45 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:10:45 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:10:45 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:10:45 INFO     [itsthe1.api.monitoring] GET /changes -> 200 (364 ms) from 127.0.0.1
+2026-08-31 13:10:47 INFO     [itsthe1.api.monitoring] GET /changes?since=ci69346.co67236.cg90807.rc30228.mg2031.gu73793.lg131512.rm-103614&wait=2 -> 200 (2009 ms) from 127.0.0.1
+2026-08-31 13:10:47 INFO     [itsthe1.api.monitoring] GET /changes?since=ci1.co1.cg1.rc1.mg1.gu1.lg1.rm1&wait=20 -> 200 (1 ms) from 127.0.0.1
+2026-08-31 13:10:48 INFO     [itsthe1.api.monitoring] GET /changes?since=ci69346.co67236.cg90807.rc30228.mg2031.gu73793.lg131512.rm-103614&wait=30 -> 200 (762 ms) from 127.0.0.1
+2026-08-31 13:11:43 INFO     [itsthe1.api.monitoring] GET /changes?since=ci69346.co67236.cg90807.rc30228.mg2031.gu73793.lg131512.rm-103614&wait=9999 -> 200 (55005 ms) from 127.0.0.1
+2026-08-31 13:13:01 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:13:02 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:13:02 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:13:02 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:13:02 INFO     [itsthe1.api.monitoring] GET /changes -> 200 (21 ms) from 127.0.0.1
+2026-08-31 13:13:03 INFO     [itsthe1.api.monitoring] GET /changes?since=ci69346.co67236.cg90807.rc30228.mg2031.gu73793.lg131512.rm-103614&wait=30 -> 200 (1271 ms) from 127.0.0.1
+2026-08-31 13:13:21 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:13:22 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:13:22 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:13:22 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:13:23 INFO     [itsthe1.api.monitoring] GET /room -> 200 (202 ms) from 127.0.0.1
+2026-08-31 13:13:23 INFO     [itsthe1.api.monitoring] GET /checkintable -> 200 (645 ms) from 127.0.0.1
+2026-08-31 13:13:25 INFO     [itsthe1.api.monitoring] GET /checkinguest -> 200 (1151 ms) from 127.0.0.1
+2026-08-31 13:13:27 INFO     [itsthe1.api.monitoring] GET /guesttable -> 200 (1689 ms) from 127.0.0.1
+2026-08-31 13:13:28 INFO     [itsthe1.api.monitoring] GET /guestattachment -> 200 (893 ms) from 127.0.0.1
+2026-08-31 13:13:28 INFO     [itsthe1.api.monitoring] GET /payment -> 200 (404 ms) from 127.0.0.1
+2026-08-31 13:13:29 INFO     [itsthe1.api.monitoring] GET /checkout -> 200 (464 ms) from 127.0.0.1
+2026-08-31 13:13:29 INFO     [itsthe1.api.monitoring] GET /roomchange -> 200 (55 ms) from 127.0.0.1
+2026-08-31 13:13:29 INFO     [itsthe1.api.monitoring] GET /mainguestchange -> 200 (5 ms) from 127.0.0.1
+2026-08-31 13:13:31 INFO     [itsthe1.api.monitoring] GET /log -> 200 (1951 ms) from 127.0.0.1
+2026-08-31 13:13:31 INFO     [itsthe1.api.monitoring] GET /room -> 200 (9 ms) from 127.0.0.1
+2026-08-31 13:13:31 INFO     [itsthe1.api.monitoring] GET /checkintable -> 200 (765 ms) from 127.0.0.1
+2026-08-31 13:13:33 INFO     [itsthe1.api.monitoring] GET /checkinguest -> 200 (1029 ms) from 127.0.0.1
+2026-08-31 13:13:34 INFO     [itsthe1.api.monitoring] GET /guesttable -> 200 (1224 ms) from 127.0.0.1
+2026-08-31 13:13:35 INFO     [itsthe1.api.monitoring] GET /guestattachment -> 200 (804 ms) from 127.0.0.1
+2026-08-31 13:13:35 INFO     [itsthe1.api.monitoring] GET /payment -> 200 (391 ms) from 127.0.0.1
+2026-08-31 13:13:35 INFO     [itsthe1.api.monitoring] GET /checkout -> 200 (393 ms) from 127.0.0.1
+2026-08-31 13:13:35 INFO     [itsthe1.api.monitoring] GET /roomchange -> 200 (45 ms) from 127.0.0.1
+2026-08-31 13:13:35 INFO     [itsthe1.api.monitoring] GET /mainguestchange -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:13:37 INFO     [itsthe1.api.monitoring] GET /log -> 200 (1647 ms) from 127.0.0.1
+2026-08-31 13:13:37 INFO     [itsthe1.api.monitoring] GET /changes -> 200 (10 ms) from 127.0.0.1
+2026-08-31 13:13:37 INFO     [itsthe1.api.monitoring] GET /changes?since=ci69346.co67236.cg90807.rc30228.mg2031.gu73793.lg131512.rm-103614 -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:13:37 INFO     [itsthe1.api.monitoring] GET /room -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:13:37 INFO     [itsthe1.api.monitoring] GET /checkout?since_id=67235 -> 200 (3 ms) from 127.0.0.1
+2026-08-31 13:13:37 INFO     [itsthe1.api.monitoring] GET /checkintable?since_id=69345 -> 200 (11 ms) from 127.0.0.1
+2026-08-31 13:13:37 INFO     [itsthe1.api.monitoring] GET /checkinguest?since_id=90806 -> 200 (3 ms) from 127.0.0.1
+2026-08-31 13:13:37 INFO     [itsthe1.api.monitoring] GET /log?since_id=131511 -> 200 (3 ms) from 127.0.0.1
+2026-08-31 13:13:55 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:13:56 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:13:56 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:13:56 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:13:56 INFO     [itsthe1.api.monitoring] GET /room -> 200 (334 ms) from 127.0.0.1
+2026-08-31 13:13:57 INFO     [itsthe1.api.monitoring] GET /checkintable -> 200 (818 ms) from 127.0.0.1
+2026-08-31 13:13:58 INFO     [itsthe1.api.monitoring] GET /checkinguest -> 200 (1156 ms) from 127.0.0.1
+2026-08-31 13:14:00 INFO     [itsthe1.api.monitoring] GET /guesttable -> 200 (1142 ms) from 127.0.0.1
+2026-08-31 13:14:00 INFO     [itsthe1.api.monitoring] GET /guestattachment -> 200 (631 ms) from 127.0.0.1
+2026-08-31 13:14:01 INFO     [itsthe1.api.monitoring] GET /payment -> 200 (537 ms) from 127.0.0.1
+2026-08-31 13:14:01 INFO     [itsthe1.api.monitoring] GET /checkout -> 200 (403 ms) from 127.0.0.1
+2026-08-31 13:14:01 INFO     [itsthe1.api.monitoring] GET /roomchange -> 200 (66 ms) from 127.0.0.1
+2026-08-31 13:14:01 INFO     [itsthe1.api.monitoring] GET /mainguestchange -> 200 (20 ms) from 127.0.0.1
+2026-08-31 13:14:03 INFO     [itsthe1.api.monitoring] GET /log -> 200 (1936 ms) from 127.0.0.1
+2026-08-31 13:14:04 INFO     [itsthe1.api.monitoring] GET /guestcheckout -> 200 (1142 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /guestversion -> 200 (3888 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /country -> 200 (40 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /emirate -> 200 (13 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /documenttype -> 200 (10 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /visitpurpose -> 200 (8 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /relationship -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /escorttype -> 200 (1 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /checkintype -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /checkouttype -> 200 (1 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /paymenttype -> 200 (1 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /cardtype -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /accessibilitytype -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /cancellationreason -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /dtcmaction -> 200 (1 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /guestdocumentimage -> 200 (2 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /checkincancellation -> 200 (3 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /changes -> 200 (6 ms) from 127.0.0.1
+2026-08-31 13:14:08 INFO     [itsthe1.api.monitoring] GET /checkin -> 200 (5 ms) from 127.0.0.1
+2026-08-31 13:14:48 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:14:49 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:14:49 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:14:49 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:15:03 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:15:05 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:15:05 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:15:05 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:15:05 INFO     [itsthe1.api.monitoring] GET /changes -> 200 (41 ms) from 127.0.0.1
+2026-08-31 13:15:06 INFO     [itsthe1.api.monitoring] GET /changes?since=ci69346.co67236.cg90807.rc30228.mg2031.gu73793.lg131512.rm-103614&wait=30 -> 200 (1014 ms) from 127.0.0.1
+2026-08-31 13:15:06 INFO     [itsthe1.api.monitoring] GET /changes -> 200 (3 ms) from 127.0.0.1
+2026-08-31 13:17:22 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:17:23 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:17:23 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:17:23 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:17:23 INFO     [waitress] Serving on http://127.0.0.1:5031
+2026-08-31 13:17:47 INFO     [itsthe1.api.monitoring] GET /log -> 200 (3562 ms) from 127.0.0.1
+2026-08-31 13:17:50 INFO     [itsthe1.api.monitoring] GET /log -> 200 (3307 ms) from 127.0.0.1
+2026-08-31 13:17:52 INFO     [itsthe1.api.monitoring] GET /checkintable -> 200 (1334 ms) from 127.0.0.1
+2026-08-31 13:17:53 INFO     [itsthe1.api.monitoring] GET /checkintable -> 200 (1234 ms) from 127.0.0.1
+2026-08-31 13:17:54 INFO     [itsthe1.api.monitoring] GET /checkintable -> 304 (1203 ms) from 127.0.0.1
+2026-08-31 13:17:54 INFO     [itsthe1.api.monitoring] GET /changes -> 200 (27 ms) from 127.0.0.1
+2026-08-31 13:17:55 INFO     [itsthe1.api.monitoring] GET /room -> 200 (4 ms) from 127.0.0.1
+2026-08-31 13:17:55 INFO     [itsthe1.api.monitoring] GET /checkout?since_id=67236 -> 200 (5 ms) from 127.0.0.1
+2026-08-31 13:18:07 INFO     [itsthe1.api.monitoring] GET /changes?since=ci69346.co67236.cg90807.rc30228.mg2031.gu73793.lg131512.rm-103614&wait=8 -> 200 (4 ms) from 127.0.0.1
+2026-08-31 13:18:07 INFO     [itsthe1.api.monitoring] GET /changes?since=ci69346.co67236.cg90807.rc30228.mg2031.gu73793.lg131512.rm-103614&wait=8 -> 200 (3 ms) from 127.0.0.1
+2026-08-31 13:18:09 INFO     [itsthe1.api.monitoring] GET /room -> 200 (3 ms) from 127.0.0.1
+2026-08-31 13:18:09 INFO     [itsthe1.api.monitoring] GET /room -> 200 (3 ms) from 127.0.0.1
+2026-08-31 13:18:09 INFO     [itsthe1.api.monitoring] GET /room -> 200 (3 ms) from 127.0.0.1
+2026-08-31 13:18:14 INFO     [itsthe1.api.monitoring] GET /changes?since=ci69346.co67236.cg90807.rc30228.mg2031.gu73793.lg131512.rm-103614&wait=8 -> 200 (8006 ms) from 127.0.0.1
+2026-08-31 13:18:14 INFO     [itsthe1.api.monitoring] GET /changes?since=ci69346.co67236.cg90807.rc30228.mg2031.gu73793.lg131512.rm-103614&wait=8 -> 200 (8006 ms) from 127.0.0.1
+2026-08-31 13:18:15 INFO     [itsthe1.api.monitoring] GET /changes?since=ci69346.co67236.cg90807.rc30228.mg2031.gu73793.lg131512.rm-103614&wait=8 -> 200 (8011 ms) from 127.0.0.1
+2026-08-31 13:19:22 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 13:19:23 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 13:19:23 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 13:19:23 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 13:19:23 INFO     [itsthe1.api.monitoring] GET /room -> 200 (11 ms) from 127.0.0.1
+2026-08-31 13:19:23 WARNING  [itsthe1.api.monitoring] GET /log?limit=notanumber -> 400 (0 ms) from 127.0.0.1
+2026-08-31 13:19:24 INFO     [itsthe1.api.monitoring] GET /checkintable -> 200 (751 ms) from 127.0.0.1
+2026-08-31 13:21:49 WARNING  [itsthe1.api.monitoring] GET /log?since_id=abc -> 400 (0 ms) from 127.0.0.1
+2026-08-31 13:21:49 WARNING  [itsthe1.api.monitoring] GET /log?limit=0 -> 400 (0 ms) from 127.0.0.1
+2026-08-31 13:21:49 WARNING  [itsthe1.api.monitoring] GET /log?limit=-3 -> 400 (0 ms) from 127.0.0.1
+2026-08-31 13:21:49 WARNING  [itsthe1.api.monitoring] GET /log?offset=-1 -> 400 (0 ms) from 127.0.0.1
+2026-08-31 13:21:49 WARNING  [itsthe1.api.monitoring] GET /log?order=sideways -> 400 (0 ms) from 127.0.0.1
+2026-08-31 13:21:49 WARNING  [itsthe1.api.monitoring] GET /log?since=notadate -> 400 (0 ms) from 127.0.0.1
+2026-08-31 13:21:49 WARNING  [itsthe1.api.monitoring] GET /checkintable?active=maybe -> 400 (0 ms) from 127.0.0.1
+2026-08-31 13:21:49 WARNING  [itsthe1.api.monitoring] GET /checkinguest?since=2026-01-01 -> 400 (0 ms) from 127.0.0.1
+2026-08-31 14:43:35 INFO     [itsthe1.api] CA bundle: C:\Python313\Lib\site-packages\certifi\cacert.pem
+2026-08-31 14:43:37 INFO     [itsthe1.api.monitoring] Monitoring enabled: /ping /health /metrics /routes /status
+2026-08-31 14:43:37 INFO     [itsthe1.api] Application created with 51 routes
+2026-08-31 14:43:37 INFO     [itsthe1.api] Database: mssql+pyodbc://sa:***@PZND-DESKTOP\SQL2022DEV/president_hotel?driver=ODBC+Driver+17+for+SQL+Server
+2026-08-31 14:43:37 INFO     [waitress] Serving on http://127.0.0.1:5031
+2026-08-31 14:43:58 INFO     [itsthe1.api.monitoring] GET /log?since_id=131512 -> 200 (5 ms) from 127.0.0.1
+2026-08-31 14:43:58 INFO     [itsthe1.api.monitoring] GET /log?since_id=131507&limit=200 -> 200 (4 ms) from 127.0.0.1
+2026-08-31 14:43:58 INFO     [itsthe1.api.monitoring] GET /room -> 200 (4 ms) from 127.0.0.1
+2026-08-31 14:43:58 INFO     [itsthe1.api.monitoring] GET /checkinguest?checkin_id=69345 -> 200 (6 ms) from 127.0.0.1
+2026-08-31 14:43:58 WARNING  [itsthe1.api.monitoring] GET /log?since_id=notanumber -> 400 (0 ms) from 127.0.0.1
+2026-08-31 14:44:59 INFO     [itsthe1.api.monitoring] GET /room -> 200 (7 ms) from 127.0.0.1
+2026-08-31 14:45:04 INFO     [itsthe1.api.monitoring] GET /room -> 200 (2 ms) from 127.0.0.1
+2026-08-31 14:47:06 INFO     [itsthe1.api.monitoring] GET /room -> 200 (3 ms) from 127.0.0.1
+2026-08-31 14:47:17 INFO     [itsthe1.api.monitoring] GET /room -> 200 (9 ms) from 127.0.0.1
+2026-08-31 14:47:22 INFO     [itsthe1.api.monitoring] GET /room -> 200 (2 ms) from 127.0.0.1

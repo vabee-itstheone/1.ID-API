@@ -1,0 +1,11 @@
+{
+  "CheckinUID": "REPLACE_WITH_CHECKIN_UID",
+  "CancellationDateTime": "2026-08-04T09:00:00",
+  "CancellationReasonCode": "UserError",
+  "Comment": "payload collection - cancel a checkin created for testing",
+  "MessageType": "CheckinCancellationRequest",
+  "ClientUID": "Establishment101",
+  "MessageUID": null,
+  "CorrelationUID": "test-cancel-001",
+  "Timestamp": "2026-08-04T09:00:00"
+}

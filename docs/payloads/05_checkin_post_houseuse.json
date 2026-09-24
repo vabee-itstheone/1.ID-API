@@ -1,0 +1,58 @@
+{
+  "RoomNumber": "008",
+  "IsEarlyCheckin": false,
+  "CheckinDateTime": "2026-08-04T08:00:00",
+  "PaymentMethodCode": null,
+  "CreditCardNumber": null,
+  "CreditCardTypeCode": null,
+  "PaidAmount": 0,
+  "Comment": "payload collection - house use stay, no payment",
+  "IsWaitingForRoom": false,
+  "IsHouseUse": true,
+  "MessageType": "CheckinRequest",
+  "ClientUID": "Establishment101",
+  "MessageUID": null,
+  "CorrelationUID": "test-checkin-houseuse-001",
+  "Timestamp": "2026-08-04T08:00:00",
+  "Guests": [
+    {
+      "UID": null,
+      "GuestCode": "PC-MAIN-0300",
+      "FirstName": "Fatima",
+      "LastName": "Hassan",
+      "ArabicName": "فاطمة حسن",
+      "GenderCode": "female",
+      "Email": "fatima.hassan@example.com",
+      "Mobile": "501330001",
+      "ResidenceCountryPhone": "971501330001",
+      "BirthDate": "1995-01-20T00:00:00",
+      "BirthPlace": "Sharjah",
+      "NationalityCode": "AE",
+      "ResidenceCountryCode": "AE",
+      "RelationshipCode": null,
+      "VisitPurposeCode": "hotelstaff",
+      "CheckinDateTime": "2026-08-04T08:00:00",
+      "CheckoutDateTime": null,
+      "IsMainGuest": true,
+      "AttachmentTypeCode": "emiratesid",
+      "DocumentNumber": "784199512345671",
+      "IssueCountryCode": "AE",
+      "IssueDate": "2023-01-01T00:00:00",
+      "ExpiryDate": "2033-01-01T00:00:00",
+      "EmirateCode": "sharjah",
+      "RequiresAccessibility": false,
+      "AccessibilityTypes": [],
+      "OtherAccessibilityType": "",
+      "Attachments": [
+        {
+          "Id": 0,
+          "UID": null,
+          "AttachmentCode": "PC-DOC-0300",
+          "Name": "Image_1.jpg",
+          "Size": 160,
+          "ContentBase64Encoded": "/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q=="
+        }
+      ]
+    }
+  ]
+}

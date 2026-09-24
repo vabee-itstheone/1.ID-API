@@ -1,0 +1,60 @@
+{
+  "RoomNumber": "020",
+  "IsEarlyCheckin": false,
+  "IsLateCheckout": false,
+  "CheckinDateTime": "2026-08-01T10:00:00",
+  "CheckoutDateTime": "2026-08-02T11:00:00",
+  "PaymentMethodCode": "cash",
+  "CreditCardNumber": null,
+  "CreditCardTypeCode": null,
+  "PaidAmount": 0,
+  "Comment": "payload collection - stay that already started and ended",
+  "IsWaitingForRoom": false,
+  "IsHouseUse": false,
+  "MessageType": "AddBackdatedCheckinRequest",
+  "ClientUID": "Establishment101",
+  "MessageUID": null,
+  "CorrelationUID": "test-backdated-001",
+  "Timestamp": "2026-08-04T08:00:00",
+  "Guests": [
+    {
+      "UID": null,
+      "GuestCode": "PC-BACK-0400",
+      "FirstName": "Daniel",
+      "LastName": "Perera",
+      "ArabicName": "دانيال بيريرا",
+      "GenderCode": "male",
+      "Email": "daniel.perera@example.com",
+      "Mobile": "501440001",
+      "ResidenceCountryPhone": "94771440001",
+      "BirthDate": "1988-04-18T00:00:00",
+      "BirthPlace": "Colombo",
+      "NationalityCode": "LK",
+      "ResidenceCountryCode": "LK",
+      "RelationshipCode": null,
+      "VisitPurposeCode": "tourism",
+      "CheckinDateTime": "2026-08-01T10:00:00",
+      "CheckoutDateTime": "2026-08-02T11:00:00",
+      "IsMainGuest": true,
+      "AttachmentTypeCode": "passport",
+      "DocumentNumber": "LK5566778",
+      "IssueCountryCode": "LK",
+      "IssueDate": "2020-02-01T00:00:00",
+      "ExpiryDate": "2030-02-01T00:00:00",
+      "EmirateCode": null,
+      "RequiresAccessibility": false,
+      "AccessibilityTypes": [],
+      "OtherAccessibilityType": "",
+      "Attachments": [
+        {
+          "Id": 0,
+          "UID": null,
+          "AttachmentCode": "PC-DOC-0400",
+          "Name": "Image_1.jpg",
+          "Size": 160,
+          "ContentBase64Encoded": "/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q=="
+        }
+      ]
+    }
+  ]
+}

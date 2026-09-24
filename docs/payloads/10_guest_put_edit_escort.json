@@ -1,0 +1,48 @@
+{
+  "CheckinUID": "REPLACE_WITH_CHECKIN_UID",
+  "Comment": "payload collection - edit an escort already on the checkin",
+  "MessageType": "GuestUpdateRequest",
+  "ClientUID": "Establishment101",
+  "MessageUID": null,
+  "CorrelationUID": "test-edit-escort-001",
+  "Timestamp": "2026-08-04T08:45:00",
+  "GuestInfo": {
+    "UID": null,
+    "GuestCode": "PC-ESCORT-0500",
+    "FirstName": "Alan Mathison",
+    "LastName": "Turing",
+    "ArabicName": "آلان تورينج",
+    "GenderCode": "male",
+    "Email": "alan.m.turing@example.com",
+    "Mobile": "501550099",
+    "ResidenceCountryPhone": "971501550099",
+    "BirthDate": "1990-11-20T00:00:00",
+    "BirthPlace": "Manchester",
+    "NationalityCode": "GB",
+    "ResidenceCountryCode": "AE",
+    "RelationshipCode": "familyMember",
+    "VisitPurposeCode": "tourism",
+    "CheckinDateTime": "2026-08-04T08:30:00",
+    "CheckoutDateTime": null,
+    "IsMainGuest": false,
+    "AttachmentTypeCode": "passport",
+    "DocumentNumber": "GB1122334",
+    "IssueCountryCode": "GB",
+    "IssueDate": "2019-05-01T00:00:00",
+    "ExpiryDate": "2029-05-01T00:00:00",
+    "EmirateCode": null,
+    "RequiresAccessibility": false,
+    "AccessibilityTypes": [],
+    "OtherAccessibilityType": "",
+    "Attachments": [
+      {
+        "Id": 0,
+        "UID": null,
+        "AttachmentCode": "PC-DOC-0500",
+        "Name": "Image_1.jpg",
+        "Size": 160,
+        "ContentBase64Encoded": "/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAALCAABAAEBAREA/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQEAAD8AKp//2Q=="
+      }
+    ]
+  }
+}

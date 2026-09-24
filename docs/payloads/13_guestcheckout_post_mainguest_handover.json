@@ -1,0 +1,11 @@
+{
+  "CheckinUID": "REPLACE_WITH_CHECKIN_UID",
+  "GuestUID": "REPLACE_WITH_DEPARTING_MAIN_GUEST_ID",
+  "CheckoutDateTime": "2026-08-04T10:15:00",
+  "NewMainGuestUID": "REPLACE_WITH_REMAINING_ESCORT_GUEST_ID",
+  "MessageType": "GuestCheckoutRequest",
+  "ClientUID": "Establishment101",
+  "MessageUID": null,
+  "CorrelationUID": "test-mainguest-handover-001",
+  "Timestamp": "2026-08-04T10:15:00"
+}

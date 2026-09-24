@@ -1,0 +1,10 @@
+{
+  "CheckinUID": "REPLACE_WITH_CHECKIN_UID",
+  "IsLateCheckout": true,
+  "CheckoutDateTime": "2026-08-04T11:00:00",
+  "MessageType": "CheckoutUpdateRequest",
+  "ClientUID": "Establishment101",
+  "MessageUID": null,
+  "CorrelationUID": "test-checkout-put-001",
+  "Timestamp": "2026-08-04T11:00:00"
+}
